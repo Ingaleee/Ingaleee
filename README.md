@@ -1,4 +1,3 @@
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Ingaleee/Ingaleee/main/assets/banner.gif" alt="header" />
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=Hey,+I’m+Egor;Graph+algorithms+geek;Open‑source+believer&center=true&width=440&height=45">
 </p>
