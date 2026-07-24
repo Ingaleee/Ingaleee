@@ -86,8 +86,8 @@
         <rect x="843" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
         <circle cx="850.5" cy="188" r="1.5" fill="#9dff5b"/>
       </g><g>
-        <rect x="868" y="163" width="15" height="33" rx="4" fill="#29f2ff" opacity=".9"/>
-        <circle cx="875.5" cy="163" r="3" fill="#9dff5b"/>
+        <rect x="868" y="166" width="15" height="30" rx="4" fill="#29f2ff" opacity=".9"/>
+        <circle cx="875.5" cy="166" r="3" fill="#9dff5b"/>
       </g><g>
         <rect x="893" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
         <circle cx="900.5" cy="188" r="1.5" fill="#9dff5b"/>
