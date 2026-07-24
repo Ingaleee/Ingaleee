@@ -36,10 +36,10 @@
     <text x="122" y="28" class="mono" font-size="10" letter-spacing="1" fill="#75808d">PRIMARY</text>
     <text x="122" y="65" class="mono" font-size="18" fill="#f2f5f8">C#</text>
     <text x="222" y="28" class="mono" font-size="10" letter-spacing="1" fill="#75808d">SIGNALS</text>
-    <text x="222" y="65" class="sans" font-size="32" font-weight="760" fill="#63d8e6">9</text>
+    <text x="222" y="65" class="sans" font-size="32" font-weight="760" fill="#63d8e6">371</text>
     <line x1="20" y1="88" x2="320" y2="88" stroke="#29313b"/>
     <text x="20" y="112" class="mono" font-size="9" letter-spacing=".8" fill="#75808d">LATEST DEPLOYMENT SIGNAL</text>
-    <text x="20" y="135" class="mono" font-size="12" fill="#f2f5f8">Lab2</text>
+    <text x="20" y="135" class="mono" font-size="12" fill="#f2f5f8">Ingaleee</text>
   </g>
 
   <text x="430" y="52" class="mono" font-size="10" letter-spacing="1.1" fill="#75808d">CONTRIBUTION TOPOLOGY // 34 WEEKS</text>
@@ -143,14 +143,14 @@
         <title>2026-01-17: 0 public contributions</title>
       </rect><rect x="556" y="98" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-01-18: 0 public contributions</title>
-      </rect><rect x="556" y="116" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-01-19: 0 public contributions</title>
+      </rect><rect x="556" y="116" width="14" height="14" rx="3" fill="#347786">
+        <title>2026-01-19: 19 public contributions</title>
       </rect><rect x="556" y="134" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-01-20: 1 public contributions</title>
+        <title>2026-01-20: 17 public contributions</title>
       </rect><rect x="556" y="152" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-01-21: 1 public contributions</title>
-      </rect><rect x="556" y="170" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-01-22: 1 public contributions</title>
+        <title>2026-01-21: 20 public contributions</title>
+      </rect><rect x="556" y="170" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-01-22: 4 public contributions</title>
       </rect><rect x="556" y="188" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-01-23: 0 public contributions</title>
       </rect><rect x="556" y="206" width="14" height="14" rx="3" fill="#171c24">
@@ -233,8 +233,8 @@
         <title>2026-03-03: 0 public contributions</title>
       </rect><rect x="664" y="152" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-03-04: 0 public contributions</title>
-      </rect><rect x="664" y="170" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-03-05: 0 public contributions</title>
+      </rect><rect x="664" y="170" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-03-05: 3 public contributions</title>
       </rect><rect x="664" y="188" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-03-06: 0 public contributions</title>
       </rect><rect x="664" y="206" width="14" height="14" rx="3" fill="#171c24">
@@ -273,20 +273,20 @@
         <title>2026-03-23: 0 public contributions</title>
       </rect><rect x="718" y="134" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-03-24: 0 public contributions</title>
-      </rect><rect x="718" y="152" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-03-25: 0 public contributions</title>
+      </rect><rect x="718" y="152" width="14" height="14" rx="3" fill="#23515d">
+        <title>2026-03-25: 6 public contributions</title>
       </rect><rect x="718" y="170" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-03-26: 0 public contributions</title>
       </rect><rect x="718" y="188" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-03-27: 0 public contributions</title>
-      </rect><rect x="718" y="206" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-03-28: 0 public contributions</title>
-      </rect><rect x="736" y="98" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-03-29: 0 public contributions</title>
-      </rect><rect x="736" y="116" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-03-30: 1 public contributions</title>
-      </rect><rect x="736" y="134" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-03-31: 0 public contributions</title>
+      </rect><rect x="718" y="206" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-03-28: 4 public contributions</title>
+      </rect><rect x="736" y="98" width="14" height="14" rx="3" fill="#23515d">
+        <title>2026-03-29: 6 public contributions</title>
+      </rect><rect x="736" y="116" width="14" height="14" rx="3" fill="#63d8e6">
+        <title>2026-03-30: 33 public contributions</title>
+      </rect><rect x="736" y="134" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-03-31: 2 public contributions</title>
       </rect><rect x="736" y="152" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-04-01: 0 public contributions</title>
       </rect><rect x="736" y="170" width="14" height="14" rx="3" fill="#171c24">
@@ -343,10 +343,10 @@
         <title>2026-04-27: 0 public contributions</title>
       </rect><rect x="808" y="134" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-04-28: 0 public contributions</title>
-      </rect><rect x="808" y="152" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-04-29: 0 public contributions</title>
-      </rect><rect x="808" y="170" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-04-30: 0 public contributions</title>
+      </rect><rect x="808" y="152" width="14" height="14" rx="3" fill="#23515d">
+        <title>2026-04-29: 10 public contributions</title>
+      </rect><rect x="808" y="170" width="14" height="14" rx="3" fill="#23515d">
+        <title>2026-04-30: 6 public contributions</title>
       </rect><rect x="808" y="188" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-05-01: 0 public contributions</title>
       </rect><rect x="808" y="206" width="14" height="14" rx="3" fill="#171c24">
@@ -372,7 +372,7 @@
       </rect><rect x="844" y="134" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-05-12: 0 public contributions</title>
       </rect><rect x="844" y="152" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-05-13: 1 public contributions</title>
+        <title>2026-05-13: 22 public contributions</title>
       </rect><rect x="844" y="170" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-05-14: 0 public contributions</title>
       </rect><rect x="844" y="188" width="14" height="14" rx="3" fill="#171c24">
@@ -401,14 +401,14 @@
         <title>2026-05-26: 0 public contributions</title>
       </rect><rect x="880" y="152" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-05-27: 0 public contributions</title>
-      </rect><rect x="880" y="170" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-05-28: 0 public contributions</title>
-      </rect><rect x="880" y="188" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-05-29: 0 public contributions</title>
-      </rect><rect x="880" y="206" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-05-30: 1 public contributions</title>
-      </rect><rect x="898" y="98" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-05-31: 0 public contributions</title>
+      </rect><rect x="880" y="170" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-05-28: 5 public contributions</title>
+      </rect><rect x="880" y="188" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-05-29: 5 public contributions</title>
+      </rect><rect x="880" y="206" width="14" height="14" rx="3" fill="#23515d">
+        <title>2026-05-30: 6 public contributions</title>
+      </rect><rect x="898" y="98" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-05-31: 5 public contributions</title>
       </rect><rect x="898" y="116" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-06-01: 0 public contributions</title>
       </rect><rect x="898" y="134" width="14" height="14" rx="3" fill="#171c24">
@@ -447,8 +447,8 @@
         <title>2026-06-18: 0 public contributions</title>
       </rect><rect x="934" y="188" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-06-19: 0 public contributions</title>
-      </rect><rect x="934" y="206" width="14" height="14" rx="3" fill="#63d8e6">
-        <title>2026-06-20: 2 public contributions</title>
+      </rect><rect x="934" y="206" width="14" height="14" rx="3" fill="#23515d">
+        <title>2026-06-20: 9 public contributions</title>
       </rect><rect x="952" y="98" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-06-21: 0 public contributions</title>
       </rect><rect x="952" y="116" width="14" height="14" rx="3" fill="#171c24">
@@ -497,8 +497,8 @@
         <title>2026-07-13: 0 public contributions</title>
       </rect><rect x="1006" y="134" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-07-14: 0 public contributions</title>
-      </rect><rect x="1006" y="152" width="14" height="14" rx="3" fill="#347786">
-        <title>2026-07-15: 1 public contributions</title>
+      </rect><rect x="1006" y="152" width="14" height="14" rx="3" fill="#171c24">
+        <title>2026-07-15: 0 public contributions</title>
       </rect><rect x="1006" y="170" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-07-16: 0 public contributions</title>
       </rect><rect x="1006" y="188" width="14" height="14" rx="3" fill="#171c24">
@@ -515,27 +515,29 @@
         <title>2026-07-22: 0 public contributions</title>
       </rect><rect x="1024" y="170" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-07-23: 0 public contributions</title>
-      </rect><rect x="1024" y="188" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-07-24: 0 public contributions</title>
-      </rect><rect x="1024" y="206" width="14" height="14" rx="3" fill="#171c24">
-        <title>2026-07-25: 0 public contributions</title>
+      </rect><rect x="1024" y="188" width="14" height="14" rx="3" fill="#183842">
+        <title>2026-07-24: 4 public contributions</title>
       </rect></g>
-  <g><rect x="931" y="203" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+  <g><rect x="733" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.35s" repeatCount="indefinite"/>
-      </rect><rect x="553" y="131" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="841" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.56s" repeatCount="indefinite"/>
       </rect><rect x="553" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.77s" repeatCount="indefinite"/>
-      </rect><rect x="553" y="167" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="553" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.98s" repeatCount="indefinite"/>
-      </rect><rect x="733" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="553" y="131" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.19s" repeatCount="indefinite"/>
-      </rect><rect x="841" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="805" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.40s" repeatCount="indefinite"/>
-      </rect><rect x="877" y="203" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="931" y="203" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.61s" repeatCount="indefinite"/>
-      </rect><rect x="1003" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="715" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.82s" repeatCount="indefinite"/>
+      </rect><rect x="733" y="95" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="2.03s" repeatCount="indefinite"/>
+      </rect><rect x="805" y="167" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="2.24s" repeatCount="indefinite"/>
       </rect></g>
   <g opacity=".9">
     <rect x="358" y="86" width="72" height="150" fill="url(#traceBeam)" filter="url(#traceGlow)"/>
