@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const source = await readFile(new URL("../assets/nightingale-hero.webp", import.meta.url));
-const nightingale = `data:image/webp;base64,${source.toString("base64")}`;
+const source = await readFile(new URL("../assets/nightingale-flight-v9.webp", import.meta.url));
+const nightingaleFlight = `data:image/webp;base64,${source.toString("base64")}`;
 
 const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
   <title id="title">Egor Solovyev — Senior C#/.NET Backend Engineer</title>
@@ -35,6 +35,23 @@ const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" 
       <stop offset=".5" stop-color="#63e6f6" stop-opacity=".3"/>
       <stop offset="1" stop-color="#63e6f6" stop-opacity="0"/>
     </linearGradient>
+    <radialGradient id="flightAmbient" cx="78%" cy="37%" r="45%">
+      <stop offset="0" stop-color="#173441" stop-opacity=".72"/>
+      <stop offset=".42" stop-color="#0d2029" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#080a0e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flightTrail" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#63e6f6" stop-opacity="0"/>
+      <stop offset=".35" stop-color="#63e6f6" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#63e6f6" stop-opacity=".02"/>
+    </linearGradient>
+    <pattern id="cockpitGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" fill="none" stroke="#18222b" stroke-width="1"/>
+    </pattern>
+    <filter id="flightGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#000000" flood-opacity=".72"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#56dbef" flood-opacity=".16"/>
+    </filter>
     <mask id="copyReveal" maskUnits="userSpaceOnUse" x="-10" y="-80" width="630" height="410">
       <rect x="-10" y="-80" width="630" height="0" fill="#fff">
         <animate attributeName="height" from="0" to="410" dur="2.15s" begin=".55s" fill="freeze" calcMode="spline" keySplines=".22 .8 .24 1"/>
@@ -45,20 +62,40 @@ const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" 
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
       .sweep { animation: sweep 8s ease-in-out infinite; }
       .pulse { animation: pulse 3.2s ease-in-out infinite; }
+      .flight-dash { animation: flightDash 5.8s linear infinite; }
       @keyframes sweep { 0%, 22% { transform: translateX(-430px); opacity: 0; } 38% { opacity: .75; } 57%, 100% { transform: translateX(1150px); opacity: 0; } }
       @keyframes pulse { 0%, 100% { opacity: .35; } 50% { opacity: .95; } }
+      @keyframes flightDash { to { stroke-dashoffset: -72; } }
     </style>
   </defs>
 
   <rect x="12" y="12" width="1176" height="616" rx="28" fill="#080a0e" filter="url(#shadow)"/>
   <clipPath id="clip"><rect x="12" y="12" width="1176" height="616" rx="28"/></clipPath>
   <g clip-path="url(#clip)">
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="1.3s" begin=".15s" fill="freeze"/>
-      <image href="${nightingale}" x="12" y="12" width="1176" height="661.5" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="12" y="12" width="1176" height="616" fill="#080a0e"/>
+    <rect x="12" y="12" width="1176" height="616" fill="url(#cockpitGrid)" opacity=".36"/>
+    <rect x="12" y="12" width="1176" height="616" fill="url(#flightAmbient)"/>
+    <path d="M692 416C823 310 985 293 1178 326" fill="none" stroke="#253846" stroke-width="1.2" stroke-dasharray="4 12"/>
+    <path d="M728 92C854 36 1031 43 1182 115" fill="none" stroke="#1d2a34" stroke-width="1"/>
+    <circle cx="939" cy="246" r="178" fill="none" stroke="#223744" stroke-width="1" stroke-dasharray="2 10" opacity=".72"/>
+    <circle cx="939" cy="246" r="142" fill="none" stroke="#1b2d37" stroke-width="1" opacity=".62"/>
+    <g opacity=".78">
+      <path class="flight-dash" d="M1180 236C1132 237 1083 246 1037 265" fill="none" stroke="url(#flightTrail)" stroke-width="2" stroke-dasharray="18 12"/>
+      <path class="flight-dash" d="M1174 263C1120 262 1076 268 1031 284" fill="none" stroke="url(#flightTrail)" stroke-width="1" stroke-dasharray="12 16"/>
+      <circle cx="1120" cy="250" r="3" fill="#63e6f6" class="pulse"/>
     </g>
-    <rect x="12" y="12" width="1176" height="616" fill="url(#shade)"/>
-    <rect x="12" y="342" width="1176" height="286" fill="url(#bottom)"/>
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="1.15s" begin=".2s" fill="freeze"/>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;-13 -7;0 0;8 4;0 0" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="-1 925 250;1.2 925 250;-1 925 250" dur="7.2s" repeatCount="indefinite"/>
+          <image href="${nightingaleFlight}" x="708" y="112" width="430" height="268" preserveAspectRatio="xMidYMid meet" filter="url(#flightGlow)"/>
+        </g>
+      </g>
+    </g>
+    <rect x="12" y="12" width="665" height="616" fill="url(#shade)"/>
+    <rect x="12" y="388" width="1176" height="240" fill="url(#bottom)"/>
     <rect class="sweep" x="-420" y="12" width="360" height="616" fill="url(#sweep)" transform="skewX(-16)"/>
     <rect x="-250" y="12" width="250" height="616" fill="url(#scanner)" opacity=".55">
       <animate attributeName="x" values="-250;1200" dur="7.5s" begin=".2s" repeatCount="indefinite"/>
@@ -102,7 +139,12 @@ const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" 
   </g>
 
   <text x="64" y="592" class="mono" font-size="11" letter-spacing="1" fill="#6f7a87">OPEN TO RELOCATION AND INTERNATIONAL REMOTE CONTRACTS</text>
-  <text x="1011" y="592" class="mono" font-size="10" letter-spacing="1.4" fill="#7b8794">SENTINEL / 01</text>
+  <g transform="translate(956 548)">
+    <path d="M0 0H158M158 0V28" fill="none" stroke="#263944"/>
+    <circle cx="0" cy="0" r="3" fill="#63e6f6" class="pulse"/>
+    <text x="18" y="20" class="mono" font-size="9" letter-spacing="1.2" fill="#71808d">FLIGHT VECTOR / ACTIVE</text>
+  </g>
+  <text x="1013" y="592" class="mono" font-size="10" letter-spacing="1.4" fill="#7b8794">NIGHTINGALE / 09</text>
 </svg>
 `;
 
@@ -184,6 +226,18 @@ const mobileHero = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="
       <stop offset="0" stop-color="#5ee5f7" stop-opacity=".9"/>
       <stop offset="1" stop-color="#5ee5f7" stop-opacity="0"/>
     </linearGradient>
+    <radialGradient id="mobileFlightAmbient" cx="72%" cy="24%" r="48%">
+      <stop offset="0" stop-color="#173441" stop-opacity=".75"/>
+      <stop offset=".48" stop-color="#0d2029" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#080a0e" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="mobileCockpitGrid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#18222b" stroke-width="1"/>
+    </pattern>
+    <filter id="mobileFlightGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#000000" flood-opacity=".72"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#56dbef" flood-opacity=".16"/>
+    </filter>
     <mask id="mobileCopyReveal" maskUnits="userSpaceOnUse" x="35" y="380" width="650" height="280">
       <rect x="35" y="380" width="650" height="0" fill="#fff">
         <animate attributeName="height" from="0" to="280" dur="1.9s" begin=".5s" fill="freeze" calcMode="spline" keySplines=".22 .8 .24 1"/>
@@ -193,15 +247,29 @@ const mobileHero = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="
       .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
       .pulse { animation: pulse 3.2s ease-in-out infinite; }
+      .mobile-dash { animation: mobileDash 5.4s linear infinite; }
       @keyframes pulse { 0%, 100% { opacity: .35; } 50% { opacity: .95; } }
+      @keyframes mobileDash { to { stroke-dashoffset: -64; } }
     </style>
   </defs>
   <rect x="12" y="12" width="696" height="876" rx="28" fill="#080a0e"/>
   <clipPath id="mobileClip"><rect x="12" y="12" width="696" height="876" rx="28"/></clipPath>
   <g clip-path="url(#mobileClip)">
+    <rect x="12" y="12" width="696" height="480" fill="#080a0e"/>
+    <rect x="12" y="12" width="696" height="480" fill="url(#mobileCockpitGrid)" opacity=".35"/>
+    <rect x="12" y="12" width="696" height="480" fill="url(#mobileFlightAmbient)"/>
+    <circle cx="482" cy="220" r="154" fill="none" stroke="#223744" stroke-width="1" stroke-dasharray="2 10" opacity=".72"/>
+    <circle cx="482" cy="220" r="119" fill="none" stroke="#1b2d37" stroke-width="1" opacity=".62"/>
+    <path class="mobile-dash" d="M692 204C650 204 614 211 579 225" fill="none" stroke="#63e6f6" stroke-opacity=".24" stroke-width="2" stroke-dasharray="16 12"/>
     <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="1.25s" begin=".1s" fill="freeze"/>
-      <image href="${nightingale}" x="-26" y="12" width="826" height="465" preserveAspectRatio="xMidYMid slice"/>
+      <animate attributeName="opacity" from="0" to="1" dur="1.15s" begin=".15s" fill="freeze"/>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;-10 -6;0 0;7 4;0 0" dur="8.5s" repeatCount="indefinite" calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="-1 483 222;1.2 483 222;-1 483 222" dur="7s" repeatCount="indefinite"/>
+          <image href="${nightingaleFlight}" x="282" y="103" width="388" height="242" preserveAspectRatio="xMidYMid meet" filter="url(#mobileFlightGlow)"/>
+        </g>
+      </g>
     </g>
     <rect x="12" y="12" width="696" height="480" fill="url(#imageShade)"/>
   </g>
@@ -307,8 +375,8 @@ const mobileImpact = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height
 </svg>
 `;
 
-await writeFile(new URL("../assets/professional-hero-v8.svg", import.meta.url), hero, "utf8");
+await writeFile(new URL("../assets/professional-hero-v9.svg", import.meta.url), hero, "utf8");
 await writeFile(new URL("../assets/professional-impact.svg", import.meta.url), impact, "utf8");
-await writeFile(new URL("../assets/professional-hero-mobile-v8.svg", import.meta.url), mobileHero, "utf8");
+await writeFile(new URL("../assets/professional-hero-mobile-v9.svg", import.meta.url), mobileHero, "utf8");
 await writeFile(new URL("../assets/professional-impact-mobile.svg", import.meta.url), mobileImpact, "utf8");
 console.log("Built professional profile assets.");
