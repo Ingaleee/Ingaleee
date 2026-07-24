@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const source = await readFile(new URL("../assets/nightingale-flight-v9.webp", import.meta.url));
+const source = await readFile(new URL("../assets/nightingale-flight-animated-v10.webp", import.meta.url));
 const nightingaleFlight = `data:image/webp;base64,${source.toString("base64")}`;
 
 const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
@@ -84,16 +84,7 @@ const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" 
       <path class="flight-dash" d="M1174 263C1120 262 1076 268 1031 284" fill="none" stroke="url(#flightTrail)" stroke-width="1" stroke-dasharray="12 16"/>
       <circle cx="1120" cy="250" r="3" fill="#63e6f6" class="pulse"/>
     </g>
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="1.15s" begin=".2s" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="translate" values="0 0;-13 -7;0 0;8 4;0 0" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
-        <g>
-          <animateTransform attributeName="transform" type="rotate" values="-1 925 250;1.2 925 250;-1 925 250" dur="7.2s" repeatCount="indefinite"/>
-          <image href="${nightingaleFlight}" x="708" y="112" width="430" height="268" preserveAspectRatio="xMidYMid meet" filter="url(#flightGlow)"/>
-        </g>
-      </g>
-    </g>
+    <image href="${nightingaleFlight}" x="688" y="97" width="470" height="302" preserveAspectRatio="xMidYMid meet" filter="url(#flightGlow)"/>
     <rect x="12" y="12" width="665" height="616" fill="url(#shade)"/>
     <rect x="12" y="388" width="1176" height="240" fill="url(#bottom)"/>
     <rect class="sweep" x="-420" y="12" width="360" height="616" fill="url(#sweep)" transform="skewX(-16)"/>
@@ -261,16 +252,7 @@ const mobileHero = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="
     <circle cx="482" cy="220" r="154" fill="none" stroke="#223744" stroke-width="1" stroke-dasharray="2 10" opacity=".72"/>
     <circle cx="482" cy="220" r="119" fill="none" stroke="#1b2d37" stroke-width="1" opacity=".62"/>
     <path class="mobile-dash" d="M692 204C650 204 614 211 579 225" fill="none" stroke="#63e6f6" stroke-opacity=".24" stroke-width="2" stroke-dasharray="16 12"/>
-    <g opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="1.15s" begin=".15s" fill="freeze"/>
-      <g>
-        <animateTransform attributeName="transform" type="translate" values="0 0;-10 -6;0 0;7 4;0 0" dur="8.5s" repeatCount="indefinite" calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"/>
-        <g>
-          <animateTransform attributeName="transform" type="rotate" values="-1 483 222;1.2 483 222;-1 483 222" dur="7s" repeatCount="indefinite"/>
-          <image href="${nightingaleFlight}" x="282" y="103" width="388" height="242" preserveAspectRatio="xMidYMid meet" filter="url(#mobileFlightGlow)"/>
-        </g>
-      </g>
-    </g>
+    <image href="${nightingaleFlight}" x="259" y="87" width="425" height="273" preserveAspectRatio="xMidYMid meet" filter="url(#mobileFlightGlow)"/>
     <rect x="12" y="12" width="696" height="480" fill="url(#imageShade)"/>
   </g>
   <rect x="12" y="12" width="696" height="876" rx="28" fill="none" stroke="#2a303a" stroke-width="2"/>
@@ -375,8 +357,8 @@ const mobileImpact = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height
 </svg>
 `;
 
-await writeFile(new URL("../assets/professional-hero-v9.svg", import.meta.url), hero, "utf8");
+await writeFile(new URL("../assets/professional-hero-v10.svg", import.meta.url), hero, "utf8");
 await writeFile(new URL("../assets/professional-impact.svg", import.meta.url), impact, "utf8");
-await writeFile(new URL("../assets/professional-hero-mobile-v9.svg", import.meta.url), mobileHero, "utf8");
+await writeFile(new URL("../assets/professional-hero-mobile-v10.svg", import.meta.url), mobileHero, "utf8");
 await writeFile(new URL("../assets/professional-impact-mobile.svg", import.meta.url), mobileImpact, "utf8");
 console.log("Built professional profile assets.");
