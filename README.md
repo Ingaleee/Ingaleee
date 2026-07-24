@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="./assets/professional-hero-mobile-animated-v13.gif">
-    <img src="./assets/professional-hero-animated-v13.gif" alt="Egor Solovyev — Senior C#/.NET Backend Engineer" width="100%">
+    <source media="(max-width: 600px)" srcset="./assets/professional-hero-mobile-animated-v14.gif">
+    <img src="./assets/professional-hero-animated-v14.gif" alt="Egor Solovyev — Senior C#/.NET Backend Engineer" width="100%">
   </picture>
 </div>
 
