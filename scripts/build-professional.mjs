@@ -1,7 +1,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const source = await readFile(new URL("../assets/nightingale-flight-animated-v10.webp", import.meta.url));
+const source = await readFile(new URL("../assets/nightingale-flight-animated-v11.webp", import.meta.url));
 const nightingaleFlight = `data:image/webp;base64,${source.toString("base64")}`;
+const heroBirdDesktop = `<image href="${nightingaleFlight}" x="688" y="97" width="470" height="302" preserveAspectRatio="xMidYMid meet" filter="url(#flightGlow)"/>`;
+const heroBirdMobile = `<image href="${nightingaleFlight}" x="259" y="87" width="425" height="273" preserveAspectRatio="xMidYMid meet" filter="url(#mobileFlightGlow)"/>`;
 
 const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
   <title id="title">Egor Solovyev — Senior C#/.NET Backend Engineer</title>
@@ -84,7 +86,7 @@ const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" 
       <path class="flight-dash" d="M1174 263C1120 262 1076 268 1031 284" fill="none" stroke="url(#flightTrail)" stroke-width="1" stroke-dasharray="12 16"/>
       <circle cx="1120" cy="250" r="3" fill="#63e6f6" class="pulse"/>
     </g>
-    <image href="${nightingaleFlight}" x="688" y="97" width="470" height="302" preserveAspectRatio="xMidYMid meet" filter="url(#flightGlow)"/>
+    ${heroBirdDesktop}
     <rect x="12" y="12" width="665" height="616" fill="url(#shade)"/>
     <rect x="12" y="388" width="1176" height="240" fill="url(#bottom)"/>
     <rect class="sweep" x="-420" y="12" width="360" height="616" fill="url(#sweep)" transform="skewX(-16)"/>
@@ -252,7 +254,7 @@ const mobileHero = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="
     <circle cx="482" cy="220" r="154" fill="none" stroke="#223744" stroke-width="1" stroke-dasharray="2 10" opacity=".72"/>
     <circle cx="482" cy="220" r="119" fill="none" stroke="#1b2d37" stroke-width="1" opacity=".62"/>
     <path class="mobile-dash" d="M692 204C650 204 614 211 579 225" fill="none" stroke="#63e6f6" stroke-opacity=".24" stroke-width="2" stroke-dasharray="16 12"/>
-    <image href="${nightingaleFlight}" x="259" y="87" width="425" height="273" preserveAspectRatio="xMidYMid meet" filter="url(#mobileFlightGlow)"/>
+    ${heroBirdMobile}
     <rect x="12" y="12" width="696" height="480" fill="url(#imageShade)"/>
   </g>
   <rect x="12" y="12" width="696" height="876" rx="28" fill="none" stroke="#2a303a" stroke-width="2"/>
@@ -357,8 +359,8 @@ const mobileImpact = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height
 </svg>
 `;
 
-await writeFile(new URL("../assets/professional-hero-v10.svg", import.meta.url), hero, "utf8");
+await writeFile(new URL("../assets/professional-hero-v11.svg", import.meta.url), hero, "utf8");
 await writeFile(new URL("../assets/professional-impact.svg", import.meta.url), impact, "utf8");
-await writeFile(new URL("../assets/professional-hero-mobile-v10.svg", import.meta.url), mobileHero, "utf8");
+await writeFile(new URL("../assets/professional-hero-mobile-v11.svg", import.meta.url), mobileHero, "utf8");
 await writeFile(new URL("../assets/professional-impact-mobile.svg", import.meta.url), mobileImpact, "utf8");
 console.log("Built professional profile assets.");
