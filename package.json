@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-static.mjs && node scripts/build-raid.mjs && node scripts/build-professional.mjs && node scripts/generate-activity.mjs",
+    "build": "node scripts/build-static.mjs && node scripts/build-raid.mjs && node scripts/build-professional.mjs && node scripts/build-command-center.mjs && node scripts/generate-activity.mjs",
+    "build:command-center": "node scripts/build-command-center.mjs",
     "build:professional": "node scripts/build-professional.mjs",
     "build:raid": "node scripts/build-raid.mjs",
     "activity": "node scripts/generate-activity.mjs"
