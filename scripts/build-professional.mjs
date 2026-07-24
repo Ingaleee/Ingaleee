@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 
-const source = await readFile(new URL("../assets/panther-hero.webp", import.meta.url));
-const panther = `data:image/webp;base64,${source.toString("base64")}`;
+const source = await readFile(new URL("../assets/nightingale-hero.webp", import.meta.url));
+const nightingale = `data:image/webp;base64,${source.toString("base64")}`;
 
 const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
   <title id="title">Egor Solovyev — Senior C#/.NET Backend Engineer</title>
@@ -55,7 +55,7 @@ const hero = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" 
   <g clip-path="url(#clip)">
     <g opacity="0">
       <animate attributeName="opacity" from="0" to="1" dur="1.3s" begin=".15s" fill="freeze"/>
-      <image href="${panther}" x="12" y="12" width="1176" height="661.5" preserveAspectRatio="xMidYMid slice"/>
+      <image href="${nightingale}" x="12" y="12" width="1176" height="661.5" preserveAspectRatio="xMidYMid slice"/>
     </g>
     <rect x="12" y="12" width="1176" height="616" fill="url(#shade)"/>
     <rect x="12" y="342" width="1176" height="286" fill="url(#bottom)"/>
@@ -201,7 +201,7 @@ const mobileHero = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="
   <g clip-path="url(#mobileClip)">
     <g opacity="0">
       <animate attributeName="opacity" from="0" to="1" dur="1.25s" begin=".1s" fill="freeze"/>
-      <image href="${panther}" x="-26" y="12" width="826" height="465" preserveAspectRatio="xMidYMid slice"/>
+      <image href="${nightingale}" x="-26" y="12" width="826" height="465" preserveAspectRatio="xMidYMid slice"/>
     </g>
     <rect x="12" y="12" width="696" height="480" fill="url(#imageShade)"/>
   </g>
