@@ -307,8 +307,8 @@ const mobileImpact = `<svg xmlns="http://www.w3.org/2000/svg" width="720" height
 </svg>
 `;
 
-await writeFile(new URL("../assets/professional-hero.svg", import.meta.url), hero, "utf8");
+await writeFile(new URL("../assets/professional-hero-v8.svg", import.meta.url), hero, "utf8");
 await writeFile(new URL("../assets/professional-impact.svg", import.meta.url), impact, "utf8");
-await writeFile(new URL("../assets/professional-hero-mobile.svg", import.meta.url), mobileHero, "utf8");
+await writeFile(new URL("../assets/professional-hero-mobile-v8.svg", import.meta.url), mobileHero, "utf8");
 await writeFile(new URL("../assets/professional-impact-mobile.svg", import.meta.url), mobileImpact, "utf8");
 console.log("Built professional profile assets.");
