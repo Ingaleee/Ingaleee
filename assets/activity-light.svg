@@ -83,11 +83,11 @@
         <rect x="818" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="825.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
-        <rect x="843" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
-        <circle cx="850.5" cy="188" r="1.5" fill="#3f8f00"/>
+        <rect x="843" y="176" width="15" height="20" rx="4" fill="#007d91" opacity=".9"/>
+        <circle cx="850.5" cy="176" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="868" y="166" width="15" height="30" rx="4" fill="#007d91" opacity=".9"/>
-        <circle cx="875.5" cy="166" r="3" fill="#3f8f00"/>
+        <rect x="868" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
+        <circle cx="875.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
         <rect x="893" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="900.5" cy="188" r="1.5" fill="#3f8f00"/>
@@ -110,13 +110,13 @@
         <rect x="1043" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="1050.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
-        <rect x="1068" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
-        <circle cx="1075.5" cy="188" r="1.5" fill="#3f8f00"/>
+        <rect x="1068" y="104" width="15" height="92" rx="4" fill="#b3178b" opacity=".9"/>
+        <circle cx="1075.5" cy="104" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="1093" y="104" width="15" height="92" rx="4" fill="#b3178b" opacity=".9"/>
-        <circle cx="1100.5" cy="104" r="3" fill="#3f8f00"/>
+        <rect x="1093" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
+        <circle cx="1100.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g>
   <text x="418" y="224" class="mono" font-size="10" fill="#557986">-28D</text>
   <text x="1075" y="224" class="mono" font-size="10" fill="#557986">NOW</text>
-  <text x="1020" y="53" class="mono" font-size="11" fill="#557986">SYNC 2026-07-24</text>
+  <text x="1020" y="53" class="mono" font-size="11" fill="#557986">SYNC 2026-07-25</text>
 </svg>

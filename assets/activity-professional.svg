@@ -27,7 +27,7 @@
     <animate attributeName="opacity" values=".25;1;.25" dur="2.4s" repeatCount="indefinite"/>
   </circle>
   <text x="40" y="80" class="sans" font-size="21" font-weight="700" fill="#f2f5f8">Public signal, mapped as a distributed trace</text>
-  <text x="1020" y="52" class="mono" font-size="10" letter-spacing="1" fill="#75808d">SYNC 2026-07-24</text>
+  <text x="1020" y="52" class="mono" font-size="10" letter-spacing="1" fill="#75808d">SYNC 2026-07-25</text>
 
   <g transform="translate(40 104)">
     <rect width="340" height="152" rx="16" fill="#11161d" stroke="#29313b"/>
@@ -36,7 +36,7 @@
     <text x="122" y="28" class="mono" font-size="10" letter-spacing="1" fill="#75808d">PRIMARY</text>
     <text x="122" y="65" class="mono" font-size="18" fill="#f2f5f8">C#</text>
     <text x="222" y="28" class="mono" font-size="10" letter-spacing="1" fill="#75808d">SIGNALS</text>
-    <text x="222" y="65" class="sans" font-size="32" font-weight="760" fill="#63d8e6">372</text>
+    <text x="222" y="65" class="sans" font-size="32" font-weight="760" fill="#63d8e6">395</text>
     <line x1="20" y1="88" x2="320" y2="88" stroke="#29313b"/>
     <text x="20" y="112" class="mono" font-size="9" letter-spacing=".8" fill="#75808d">LATEST DEPLOYMENT SIGNAL</text>
     <text x="20" y="135" class="mono" font-size="12" fill="#f2f5f8">Ingaleee</text>
@@ -515,28 +515,30 @@
         <title>2026-07-22: 0 public contributions</title>
       </rect><rect x="1024" y="170" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-07-23: 0 public contributions</title>
-      </rect><rect x="1024" y="188" width="14" height="14" rx="3" fill="#183842">
-        <title>2026-07-24: 5 public contributions</title>
+      </rect><rect x="1024" y="188" width="14" height="14" rx="3" fill="#63d8e6">
+        <title>2026-07-24: 28 public contributions</title>
+      </rect><rect x="1024" y="206" width="14" height="14" rx="3" fill="#171c24">
+        <title>2026-07-25: 0 public contributions</title>
       </rect></g>
   <g><rect x="733" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.35s" repeatCount="indefinite"/>
-      </rect><rect x="841" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="1021" y="185" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.56s" repeatCount="indefinite"/>
-      </rect><rect x="553" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="841" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.77s" repeatCount="indefinite"/>
-      </rect><rect x="553" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="553" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.98s" repeatCount="indefinite"/>
-      </rect><rect x="553" y="131" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="553" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.19s" repeatCount="indefinite"/>
-      </rect><rect x="805" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="553" y="131" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.40s" repeatCount="indefinite"/>
-      </rect><rect x="931" y="203" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="805" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.61s" repeatCount="indefinite"/>
-      </rect><rect x="715" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="931" y="203" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="1.82s" repeatCount="indefinite"/>
-      </rect><rect x="733" y="95" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="715" y="149" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="2.03s" repeatCount="indefinite"/>
-      </rect><rect x="805" y="167" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
+      </rect><rect x="733" y="95" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="2.24s" repeatCount="indefinite"/>
       </rect></g>
   <g opacity=".9">
