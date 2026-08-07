@@ -44,11 +44,11 @@
         <rect x="493" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
         <circle cx="500.5" cy="188" r="1.5" fill="#9dff5b"/>
       </g><g>
-        <rect x="518" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
-        <circle cx="525.5" cy="188" r="1.5" fill="#9dff5b"/>
+        <rect x="518" y="176" width="15" height="20" rx="4" fill="#29f2ff" opacity=".9"/>
+        <circle cx="525.5" cy="176" r="3" fill="#9dff5b"/>
       </g><g>
-        <rect x="543" y="176" width="15" height="20" rx="4" fill="#29f2ff" opacity=".9"/>
-        <circle cx="550.5" cy="176" r="3" fill="#9dff5b"/>
+        <rect x="543" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
+        <circle cx="550.5" cy="188" r="1.5" fill="#9dff5b"/>
       </g><g>
         <rect x="568" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
         <circle cx="575.5" cy="188" r="1.5" fill="#9dff5b"/>
@@ -71,11 +71,11 @@
         <rect x="718" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
         <circle cx="725.5" cy="188" r="1.5" fill="#9dff5b"/>
       </g><g>
-        <rect x="743" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
-        <circle cx="750.5" cy="188" r="1.5" fill="#9dff5b"/>
+        <rect x="743" y="104" width="15" height="92" rx="4" fill="#ff4fd8" opacity=".9"/>
+        <circle cx="750.5" cy="104" r="3" fill="#9dff5b"/>
       </g><g>
-        <rect x="768" y="104" width="15" height="92" rx="4" fill="#ff4fd8" opacity=".9"/>
-        <circle cx="775.5" cy="104" r="3" fill="#9dff5b"/>
+        <rect x="768" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
+        <circle cx="775.5" cy="188" r="1.5" fill="#9dff5b"/>
       </g><g>
         <rect x="793" y="188" width="15" height="8" rx="4" fill="#102532" opacity=".65"/>
         <circle cx="800.5" cy="188" r="1.5" fill="#9dff5b"/>
@@ -118,5 +118,5 @@
       </g>
   <text x="418" y="224" class="mono" font-size="10" fill="#6f94a3">-28D</text>
   <text x="1075" y="224" class="mono" font-size="10" fill="#6f94a3">NOW</text>
-  <text x="1020" y="53" class="mono" font-size="11" fill="#6f94a3">SYNC 2026-08-06</text>
+  <text x="1020" y="53" class="mono" font-size="11" fill="#6f94a3">SYNC 2026-08-07</text>
 </svg>
