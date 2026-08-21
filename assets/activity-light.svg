@@ -25,15 +25,15 @@
     <text x="112" y="27" class="mono" font-size="11" fill="#557986">PRIMARY</text>
     <text x="112" y="68" class="mono" font-size="20" fill="#092d3a">C#</text>
     <text x="217" y="27" class="mono" font-size="11" fill="#557986">SIGNAL DAYS</text>
-    <text x="217" y="68" class="sans" font-size="35" font-weight="800" fill="#b3178b">2</text>
+    <text x="217" y="68" class="sans" font-size="35" font-weight="800" fill="#b3178b">1</text>
     <text x="20" y="92" class="mono" font-size="10" fill="#557986">LATEST // Ingaleee</text>
   </g>
 
   <text x="418" y="112" class="mono" font-size="11" fill="#557986">PUBLIC SIGNAL // 28 DAYS</text>
   <line x1="418" y1="202" x2="1110" y2="202" stroke="#b7d7e3"/>
   <g>
-        <rect x="418" y="104" width="15" height="92" rx="4" fill="#b3178b" opacity=".9"/>
-        <circle cx="425.5" cy="104" r="3" fill="#3f8f00"/>
+        <rect x="418" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
+        <circle cx="425.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
         <rect x="443" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="450.5" cy="188" r="1.5" fill="#3f8f00"/>
@@ -110,13 +110,13 @@
         <rect x="1043" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="1050.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
-        <rect x="1068" y="176" width="15" height="20" rx="4" fill="#007d91" opacity=".9"/>
-        <circle cx="1075.5" cy="176" r="3" fill="#3f8f00"/>
+        <rect x="1068" y="104" width="15" height="92" rx="4" fill="#b3178b" opacity=".9"/>
+        <circle cx="1075.5" cy="104" r="3" fill="#3f8f00"/>
       </g><g>
         <rect x="1093" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="1100.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g>
   <text x="418" y="224" class="mono" font-size="10" fill="#557986">-28D</text>
   <text x="1075" y="224" class="mono" font-size="10" fill="#557986">NOW</text>
-  <text x="1020" y="53" class="mono" font-size="11" fill="#557986">SYNC 2026-08-20</text>
+  <text x="1020" y="53" class="mono" font-size="11" fill="#557986">SYNC 2026-08-21</text>
 </svg>
