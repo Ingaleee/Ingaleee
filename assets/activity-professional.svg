@@ -27,7 +27,7 @@
     <animate attributeName="opacity" values=".25;1;.25" dur="2.4s" repeatCount="indefinite"/>
   </circle>
   <text x="40" y="80" class="sans" font-size="21" font-weight="700" fill="#f2f5f8">Public signal, mapped as a distributed trace</text>
-  <text x="1020" y="52" class="mono" font-size="10" letter-spacing="1" fill="#75808d">SYNC 2026-08-26</text>
+  <text x="1020" y="52" class="mono" font-size="10" letter-spacing="1" fill="#75808d">SYNC 2026-08-27</text>
 
   <g transform="translate(40 104)">
     <rect width="340" height="152" rx="16" fill="#11161d" stroke="#29313b"/>
@@ -513,6 +513,8 @@
         <title>2026-08-25: 0 public contributions</title>
       </rect><rect x="1024" y="152" width="14" height="14" rx="3" fill="#171c24">
         <title>2026-08-26: 0 public contributions</title>
+      </rect><rect x="1024" y="170" width="14" height="14" rx="3" fill="#171c24">
+        <title>2026-08-27: 0 public contributions</title>
       </rect></g>
   <g><rect x="643" y="113" width="20" height="20" rx="5" fill="none" stroke="#63d8e6" stroke-width="1.5" opacity="0">
         <animate attributeName="opacity" values="0;0;1;.15;0" keyTimes="0;.35;.48;.7;1" dur="5.8s" begin="0.35s" repeatCount="indefinite"/>
