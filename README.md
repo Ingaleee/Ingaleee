@@ -79,7 +79,7 @@
 
 <br>
 
-<a href="https://github.com/Ingaleee?tab=overview#js-contribution-activity" title="Open GitHub contribution history">
+<a href="#js-contribution-activity" title="Open GitHub contribution history">
   <img alt="Public GitHub activity over 34 weeks — open contribution history" src="./assets/activity-professional.svg" width="100%">
 </a>
 
