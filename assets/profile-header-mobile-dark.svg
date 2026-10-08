@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="380" viewBox="0 0 640 380" role="img" aria-labelledby="title desc">
+  <title id="title">Egor Solovyev — backend and systems engineering</title>
+  <desc id="desc">C#/.NET, distributed systems and reliable delivery. Geometric nightingale insignia.</desc>
+  <rect x=".5" y=".5" width="639" height="379" rx="18" fill="#101a18" stroke="#2b433b"/>
+  
+  <rect x="32" y="38" width="25" height="4" rx="2" fill="#a3e6c2"/>
+  <text x="69" y="45" font-family="Consolas,monospace" font-size="13" letter-spacing="2.5" fill="#9cafaa">INGALEEE / ENGINEERING</text>
+  
+  <text x="32" y="128" font-family="Segoe UI,Arial,sans-serif" font-size="58" font-weight="700" letter-spacing="-2" fill="#f0f5f2">Egor</text>
+  <text x="32" y="191" font-family="Segoe UI,Arial,sans-serif" font-size="58" font-weight="700" letter-spacing="-2" fill="#f0f5f2">Solovyev</text>
+  <g transform="translate(504 137) scale(.8)"><g fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M-91 23 L-45 6 L-15 12 L44-67 L28-10 L72-34 L48 11 L83 41 L22 24 L-8 42 L-39 26 L-65 38 L-54 20 Z" fill="#172720" stroke="#a3e6c2" stroke-width="2.4"/>
+    <path d="M-45 6 L-8 42 L28-10 M-15 12 L48 11 L22 24 M22 24 L83 41 M-39 26 L-15 12" stroke="#a3e6c2" stroke-opacity=".52" stroke-width="1.3"/>
+    <circle cx="-44" cy="16" r="2.3" fill="#a3e6c2" stroke="none"/>
+  </g></g>
+  <text x="32" y="237" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#a3e6c2">Backend &amp; systems engineering</text>
+  <path d="M32 277 H608" stroke="#2b433b"/>
+  <text x="32" y="311" font-family="Consolas,monospace" font-size="14" fill="#9cafaa">C# / .NET · DISTRIBUTED SYSTEMS</text>
+  <text x="32" y="344" font-family="Consolas,monospace" font-size="14" fill="#9cafaa">CORRECTNESS · RECOVERY · DELIVERY</text>
+</svg>
