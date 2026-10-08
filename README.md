@@ -5,7 +5,7 @@
     <source media="(max-width: 600px)" type="image/webp" srcset="./assets/professional-hero-mobile-animated-v15.webp">
     <source media="(max-width: 600px)" srcset="./assets/professional-hero-mobile-animated-v14.gif">
     <source type="image/webp" srcset="./assets/professional-hero-animated-v15.webp">
-    <img src="./assets/professional-hero-animated-v14.gif" alt="Egor Solovyev — Senior C#/.NET Backend Engineer" width="100%">
+    <img src="./assets/professional-hero-animated-v14.gif" alt="Egor Solovyev — Senior C#/.NET Backend Engineer. High-load and distributed systems, fintech, AI and RAG. Search p95: 150 ms; MTTR reduced by 70%; 4+ years in production; zero-downtime rollouts." width="100%">
   </picture>
 </div>
 
@@ -23,6 +23,8 @@
 
 <div align="center">
   <picture>
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="./assets/evidence-stream-mobile-still-dark.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/evidence-stream-still-dark.svg">
     <source media="(max-width: 600px)" srcset="./assets/evidence-stream-mobile-dark.svg">
     <img src="./assets/evidence-stream-dark.svg" alt="Animated production evidence stream" width="100%">
   </picture>
@@ -30,15 +32,19 @@
 
 ## Selected systems
 
+**Senior C#/.NET backend engineer** focused on search, event-driven processing, payments and reliable delivery.
+
 | System | Engineering focus | Stack |
 |---|---|---|
-| **B2B catalog and media platform** | High-performance search, event-driven processing, observability and delivery ownership | .NET 9, PostgreSQL, Kafka, Redis, MongoDB, Kubernetes |
-| **Cybersecurity AI/RAG platform** | Versioned knowledge bases, asynchronous LLM execution and analytical routing | ASP.NET Core, pgvector, HNSW, Kafka, ClickHouse |
+| **B2B catalog and media platform** | **Search p95: 150 ms** at 100K–1M SKU; event-driven processing, observability and delivery ownership | .NET 9, PostgreSQL, Kafka, Redis, MongoDB, Kubernetes |
+| **Cybersecurity AI/RAG platform** | **Zero-downtime rollouts** of versioned knowledge bases; asynchronous LLM execution and analytical routing | ASP.NET Core, pgvector, HNSW, Kafka, ClickHouse |
 | **POS lending and payment orchestration** | Idempotent callbacks, status machines, reconciliation and provider integrations | C#, SQL Server, REST, payments, transactional workflows |
+
+**Operational impact:** MTTR reduced by **70%** through distributed tracing, alerts and runbooks.
 
 ## Independent engineering
 
-- **[TrustHub](https://gitlab.com/Ingaleee/trusthub-backend)** — Go backend for a TON escrow platform with explicit deal state machines, arbitration, reputation and operational monitoring. Telegram identity, notifications, OpenSearch and TON contract acknowledgements connect the product's on-chain and off-chain parts.<br>
+- **[TrustHub](https://gitlab.com/Ingaleee/trusthub-backend)** — TON escrow platform with a Go backend and Tact smart contracts. Explicit deal state machines, arbitration and reputation; Telegram identity, notifications, OpenSearch, operational monitoring and on-chain acknowledgements.<br>
   <sub>[Go backend](https://gitlab.com/Ingaleee/trusthub-backend) · [Tact contracts](https://gitlab.com/Ingaleee/smart/-/tree/main/application/contracts) · [TON integration](https://gitlab.com/Ingaleee/trusthub-backend/-/tree/main/internal/onchain) · [Backend integration tests](https://gitlab.com/Ingaleee/trusthub-backend/-/tree/main/tests/integration)</sub>
 - **[MPLX](https://github.com/Ingaleee/MPLX)** — C++20 compiler, bytecode virtual machine, language tooling and a stable .NET interop boundary.<br>
   <sub>[Compiler](https://github.com/Ingaleee/MPLX/tree/main/Application/mplx-compiler) · [Virtual machine](https://github.com/Ingaleee/MPLX/tree/main/Application/mplx-vm) · [Language tests](https://github.com/Ingaleee/MPLX/tree/main/Presentation/tests-cpp) · [GitLab](https://gitlab.com/Ingaleee/mplx)</sub>
@@ -61,7 +67,7 @@
 
   **Experience:** Wilo SE · Sber Cybersecurity · EGAR International · Geropharm
 
-  **Backend:** C#, .NET 6—9, ASP.NET Core, EF Core, Dapper, LINQ, BackgroundService  
+  **Backend:** C#, .NET 6–10, ASP.NET Core, EF Core, Dapper, LINQ, BackgroundService<br>
   **Architecture:** Microservices, DDD, Clean Architecture, CQRS, event-driven systems, REST, gRPC  
   **Data:** PostgreSQL, SQL Server, MongoDB, ClickHouse, Redis  
   **Platform:** Kafka, RabbitMQ, Docker, Kubernetes, OpenTelemetry, Prometheus, Grafana, ELK  
@@ -73,10 +79,12 @@
 
 <br>
 
-<a href="./assets/activity-professional.svg">
-  <img alt="Live public GitHub activity telemetry" src="./assets/activity-professional.svg" width="100%">
+<a href="https://github.com/Ingaleee?tab=overview#js-contribution-activity" title="Open GitHub contribution history">
+  <img alt="Public GitHub activity over 34 weeks — open contribution history" src="./assets/activity-professional.svg" width="100%">
 </a>
 
 <p align="center">
   <sub>Open to relocation and international remote contracts.</sub>
+  <br>
+  <a href="mailto:egor_spaik05@mail.ru">Email</a> &nbsp;·&nbsp; <a href="https://t.me/Inga1e">Telegram</a>
 </p>

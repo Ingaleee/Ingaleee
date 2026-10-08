@@ -7,6 +7,7 @@
     "build:command-center": "node scripts/build-command-center.mjs",
     "build:evidence-stream": "node scripts/build-evidence-stream.mjs",
     "build:professional": "node scripts/build-professional.mjs",
-    "activity": "node scripts/generate-activity.mjs"
+    "activity": "node scripts/generate-activity.mjs",
+    "test": "node --test scripts/generate-activity.test.mjs"
   }
 }

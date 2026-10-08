@@ -36,45 +36,45 @@
   <text x="52" y="101" class="mono" font-size="10" font-weight="800" letter-spacing="1.4" fill="#007f92">PRODUCTION EVIDENCE STREAM</text>
   <text x="668" y="101" text-anchor="end" class="mono" font-size="9" letter-spacing=".8" fill="#78909d">LIVE</text>
   <g clip-path="url(#mobileLog0)">
-        <text x="52" y="124" class="mono" font-size="11.5" fill="#78909d">12:04:17</text>
-        <text x="124" y="124" class="mono" font-size="12.5" font-weight="800" fill="#007d58">SEARCH</text>
-        <text x="202" y="124" class="mono" font-size="13.5" font-weight="520" fill="#10202a">p95=150ms / HEALTHY</text>
+        <text x="52" y="124" class="mono" font-size="12.5" fill="#78909d">12:04:17</text>
+        <text x="144" y="124" class="mono" font-size="18" font-weight="800" fill="#007d58">SEARCH</text>
+        <text x="256" y="124" class="mono" font-size="22" font-weight="520" fill="#10202a">p95=150ms / HEALTHY</text>
         
       </g><g clip-path="url(#mobileLog1)">
-        <text x="52" y="158" class="mono" font-size="11.5" fill="#78909d">12:04:18</text>
-        <text x="124" y="158" class="mono" font-size="12.5" font-weight="800" fill="#007d58">EVENTS</text>
-        <text x="202" y="158" class="mono" font-size="13.5" font-weight="520" fill="#10202a">Kafka load isolated</text>
+        <text x="52" y="158" class="mono" font-size="12.5" fill="#78909d">12:04:18</text>
+        <text x="144" y="158" class="mono" font-size="18" font-weight="800" fill="#007d58">EVENTS</text>
+        <text x="256" y="158" class="mono" font-size="22" font-weight="520" fill="#10202a">Kafka load isolated</text>
         
       </g><g clip-path="url(#mobileLog2)">
-        <text x="52" y="192" class="mono" font-size="11.5" fill="#78909d">12:04:19</text>
-        <text x="124" y="192" class="mono" font-size="12.5" font-weight="800" fill="#aa6a00">RAG</text>
-        <text x="202" y="192" class="mono" font-size="13.5" font-weight="520" fill="#10202a">zero-downtime rollout</text>
+        <text x="52" y="192" class="mono" font-size="12.5" fill="#78909d">12:04:19</text>
+        <text x="144" y="192" class="mono" font-size="18" font-weight="800" fill="#aa6a00">RAG</text>
+        <text x="256" y="192" class="mono" font-size="22" font-weight="520" fill="#10202a">zero-downtime rollout</text>
         
       </g><g clip-path="url(#mobileLog3)">
-        <text x="52" y="226" class="mono" font-size="11.5" fill="#78909d">12:04:20</text>
-        <text x="124" y="226" class="mono" font-size="12.5" font-weight="800" fill="#aa6a00">PAYMENTS</text>
-        <text x="202" y="226" class="mono" font-size="13.5" font-weight="520" fill="#10202a">idempotent + reconciled</text>
+        <text x="52" y="226" class="mono" font-size="12.5" fill="#78909d">12:04:20</text>
+        <text x="144" y="226" class="mono" font-size="18" font-weight="800" fill="#aa6a00">PAYMENTS</text>
+        <text x="256" y="226" class="mono" font-size="22" font-weight="520" fill="#10202a">idempotent + reconciled</text>
         
       </g><g clip-path="url(#mobileLog4)">
-        <text x="52" y="260" class="mono" font-size="11.5" fill="#78909d">12:04:21</text>
-        <text x="124" y="260" class="mono" font-size="12.5" font-weight="800" fill="#007d58">MEDIA</text>
-        <text x="202" y="260" class="mono" font-size="13.5" font-weight="520" fill="#10202a">distributed / retry-safe</text>
+        <text x="52" y="260" class="mono" font-size="12.5" fill="#78909d">12:04:21</text>
+        <text x="144" y="260" class="mono" font-size="18" font-weight="800" fill="#007d58">MEDIA</text>
+        <text x="256" y="260" class="mono" font-size="22" font-weight="520" fill="#10202a">distributed / retry-safe</text>
         
       </g><g clip-path="url(#mobileLog5)">
-        <text x="52" y="294" class="mono" font-size="11.5" fill="#78909d">12:04:22</text>
-        <text x="124" y="294" class="mono" font-size="12.5" font-weight="800" fill="#aa6a00">OBS</text>
-        <text x="202" y="294" class="mono" font-size="13.5" font-weight="520" fill="#10202a">MTTR delta = −70%</text>
+        <text x="52" y="294" class="mono" font-size="12.5" fill="#78909d">12:04:22</text>
+        <text x="144" y="294" class="mono" font-size="18" font-weight="800" fill="#aa6a00">OBS</text>
+        <text x="256" y="294" class="mono" font-size="22" font-weight="520" fill="#10202a">MTTR delta = −70%</text>
         
       </g><g clip-path="url(#mobileLog6)">
-        <text x="52" y="328" class="mono" font-size="11.5" fill="#78909d">12:04:23</text>
-        <text x="124" y="328" class="mono" font-size="12.5" font-weight="800" fill="#007d58">SCALE</text>
-        <text x="202" y="328" class="mono" font-size="13.5" font-weight="520" fill="#10202a">catalog 100K—1M SKU</text>
+        <text x="52" y="328" class="mono" font-size="12.5" fill="#78909d">12:04:23</text>
+        <text x="144" y="328" class="mono" font-size="18" font-weight="800" fill="#007d58">SCALE</text>
+        <text x="256" y="328" class="mono" font-size="22" font-weight="520" fill="#10202a">catalog 100K—1M SKU</text>
         
       </g><g clip-path="url(#mobileLog7)">
-        <text x="52" y="362" class="mono" font-size="11.5" fill="#78909d">12:04:24</text>
-        <text x="124" y="362" class="mono" font-size="12.5" font-weight="800" fill="#007f92">STATUS</text>
-        <text x="202" y="362" class="mono" font-size="13.5" font-weight="760" fill="#10202a">critical paths nominal_</text>
-        <rect x="445" y="347" width="8" height="18" fill="#007f92"><animate attributeName="opacity" values="1;1;0;0" dur=".88s" repeatCount="indefinite"/></rect>
+        <text x="52" y="362" class="mono" font-size="12.5" fill="#78909d">12:04:24</text>
+        <text x="144" y="362" class="mono" font-size="18" font-weight="800" fill="#007f92">STATUS</text>
+        <text x="256" y="362" class="mono" font-size="22" font-weight="760" fill="#10202a">critical paths nominal_</text>
+        <rect x="562" y="343" width="8" height="22" fill="#007f92"><animate attributeName="opacity" values="1;1;0;0" dur=".88s" repeatCount="indefinite"/></rect>
       </g>
 
   <text x="28" y="455" class="mono" font-size="10" font-weight="800" letter-spacing="1.4" fill="#007f92">ACTIVE SYSTEMS</text>
@@ -84,9 +84,9 @@
     <circle cx="20" cy="22" r="4" fill="#007d58">
       <animate attributeName="opacity" values=".35;1;.35" dur="2.8s" begin="1.1s" repeatCount="indefinite"/>
     </circle>
-    <text x="34" y="26" class="mono" font-size="10" font-weight="800" letter-spacing=".9" fill="#007f92">CATALOG + MEDIA</text>
-    <text x="20" y="52" class="sans" font-size="13" font-weight="650" fill="#10202a">.NET 9 · PostgreSQL · Kafka</text>
-    <text x="20" y="73" class="sans" font-size="10.5" fill="#536976">search / BOM / assets</text>
+    <text x="34" y="26" class="mono" font-size="14" font-weight="800" letter-spacing=".9" fill="#007f92">CATALOG + MEDIA</text>
+    <text x="20" y="54" class="sans" font-size="20" font-weight="650" fill="#10202a">.NET 9 · PostgreSQL · Kafka</text>
+    <text x="20" y="78" class="sans" font-size="17" fill="#536976">search / BOM / assets</text>
   </g>
   <g transform="translate(374 474)" opacity="0">
     <animate attributeName="opacity" from="0" to="1" dur=".65s" begin="1.3s" fill="freeze"/>
@@ -94,9 +94,9 @@
     <circle cx="20" cy="22" r="4" fill="#007d58">
       <animate attributeName="opacity" values=".35;1;.35" dur="2.8s" begin="1.3s" repeatCount="indefinite"/>
     </circle>
-    <text x="34" y="26" class="mono" font-size="10" font-weight="800" letter-spacing=".9" fill="#007f92">AI / RAG</text>
-    <text x="20" y="52" class="sans" font-size="13" font-weight="650" fill="#10202a">pgvector · HNSW · ClickHouse</text>
-    <text x="20" y="73" class="sans" font-size="10.5" fill="#536976">retrieval / routing / rollout</text>
+    <text x="34" y="26" class="mono" font-size="14" font-weight="800" letter-spacing=".9" fill="#007f92">AI / RAG</text>
+    <text x="20" y="54" class="sans" font-size="20" font-weight="650" fill="#10202a">pgvector · HNSW · ClickHouse</text>
+    <text x="20" y="78" class="sans" font-size="17" fill="#536976">retrieval / routing / rollout</text>
   </g>
   <g transform="translate(28 606)" opacity="0">
     <animate attributeName="opacity" from="0" to="1" dur=".65s" begin="1.5s" fill="freeze"/>
@@ -104,9 +104,9 @@
     <circle cx="20" cy="22" r="4" fill="#007d58">
       <animate attributeName="opacity" values=".35;1;.35" dur="2.8s" begin="1.5s" repeatCount="indefinite"/>
     </circle>
-    <text x="34" y="26" class="mono" font-size="10" font-weight="800" letter-spacing=".9" fill="#007f92">LENDING + PAYMENTS</text>
-    <text x="20" y="52" class="sans" font-size="13" font-weight="650" fill="#10202a">C# · SQL Server · REST</text>
-    <text x="20" y="73" class="sans" font-size="10.5" fill="#536976">state / callbacks / reconciliation</text>
+    <text x="34" y="26" class="mono" font-size="14" font-weight="800" letter-spacing=".9" fill="#007f92">LENDING + PAYMENTS</text>
+    <text x="20" y="54" class="sans" font-size="20" font-weight="650" fill="#10202a">C# · SQL Server · REST</text>
+    <text x="20" y="78" class="sans" font-size="17" fill="#536976">state / callbacks / reconciliation</text>
   </g>
   <g transform="translate(374 606)" opacity="0">
     <animate attributeName="opacity" from="0" to="1" dur=".65s" begin="1.7s" fill="freeze"/>
@@ -114,9 +114,9 @@
     <circle cx="20" cy="22" r="4" fill="#007d58">
       <animate attributeName="opacity" values=".35;1;.35" dur="2.8s" begin="1.7s" repeatCount="indefinite"/>
     </circle>
-    <text x="34" y="26" class="mono" font-size="10" font-weight="800" letter-spacing=".9" fill="#007f92">PLATFORM</text>
-    <text x="20" y="52" class="sans" font-size="13" font-weight="650" fill="#10202a">Kubernetes · OTel · Grafana</text>
-    <text x="20" y="73" class="sans" font-size="10.5" fill="#536976">delivery / tracing / operations</text>
+    <text x="34" y="26" class="mono" font-size="14" font-weight="800" letter-spacing=".9" fill="#007f92">PLATFORM</text>
+    <text x="20" y="54" class="sans" font-size="20" font-weight="650" fill="#10202a">Kubernetes · OTel · Grafana</text>
+    <text x="20" y="78" class="sans" font-size="17" fill="#536976">delivery / tracing / operations</text>
   </g>
 
   <g transform="translate(28 760)" opacity="0">

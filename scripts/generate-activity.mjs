@@ -1,4 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 
 const USER = process.env.PROFILE_USER || "Ingaleee";
 const TOKEN = process.env.GITHUB_TOKEN || "";
@@ -31,7 +33,7 @@ const themes = {
     line: "#29313b",
     grid: "#171c24",
     text: "#f2f5f8",
-    muted: "#75808d",
+    muted: "#98a5b4",
     cyan: "#63d8e6",
     lime: "#63d8e6",
     magenta: "#63d8e6"
@@ -53,7 +55,10 @@ const esc = (value) =>
     .replaceAll('"', "&quot;");
 
 async function github(path) {
-  const response = await fetch(`https://api.github.com${path}`, { headers });
+  const response = await fetch(`https://api.github.com${path}`, {
+    headers,
+    signal: AbortSignal.timeout(15000)
+  });
   if (!response.ok) {
     throw new Error(`GitHub API ${response.status}: ${path}`);
   }
@@ -65,6 +70,7 @@ async function githubGraphql(query, variables) {
 
   const response = await fetch("https://api.github.com/graphql", {
     method: "POST",
+    signal: AbortSignal.timeout(15000),
     headers: {
       Authorization: `Bearer ${TOKEN}`,
       "Content-Type": "application/json",
@@ -128,119 +134,86 @@ function calendarFromPublicSignals(events, repos) {
   return weeks;
 }
 
-function fallbackData() {
-  const today = new Date();
-  const activity = Array.from({ length: 28 }, (_, index) => {
-    const date = new Date(today);
-    date.setUTCDate(date.getUTCDate() - (27 - index));
-    const seed = (index * 7 + 3) % 11;
-    return { date: dayKey(date), count: seed > 7 ? 3 : seed > 4 ? 1 : 0 };
-  });
-  const contributionWeeks = emptyContributionWeeks();
-  contributionWeeks.forEach((week, column) => {
-    week.contributionDays.forEach((day, row) => {
-      const seed = (column * 11 + row * 7 + 5) % 29;
-      day.contributionCount = seed > 25 ? 5 : seed > 21 ? 3 : seed > 15 ? 1 : 0;
-    });
-  });
-
-  return {
-    publicRepos: 27,
-    topLanguage: "C#",
-    activeDays: activity.filter((day) => day.count > 0).length,
-    latestRepo: "market-tick-ingestion",
-    activity,
-    contributionWeeks,
-    totalContributions: contributionWeeks
-      .flatMap((week) => week.contributionDays)
-      .reduce((sum, day) => sum + day.contributionCount, 0)
-  };
-}
-
-async function collectData() {
-  try {
-    const [user, repos, events] = await Promise.all([
-      github(`/users/${USER}`),
-      github(`/users/${USER}/repos?type=public&sort=updated&per_page=100`),
-      github(`/users/${USER}/events/public?per_page=100`)
-    ]);
-    const calendarData = await githubGraphql(
-      `query($login: String!) {
-        user(login: $login) {
-          contributionsCollection {
-            contributionCalendar {
-              totalContributions
-              weeks {
-                contributionDays {
-                  date
-                  contributionCount
-                }
+export async function collectData() {
+  const [user, repos, events] = await Promise.all([
+    github(`/users/${USER}`),
+    github(`/users/${USER}/repos?type=public&sort=updated&per_page=100`),
+    github(`/users/${USER}/events/public?per_page=100`)
+  ]);
+  const calendarData = await githubGraphql(
+    `query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                date
+                contributionCount
               }
             }
           }
         }
-      }`,
-      { login: USER }
-    ).catch((error) => {
-      console.warn(`${error.message}; using public repository signals for the topology.`);
-      return null;
-    });
-
-    const languageCounts = new Map();
-    for (const repo of repos) {
-      if (repo.language) {
-        languageCounts.set(repo.language, (languageCounts.get(repo.language) || 0) + 1);
       }
+    }`,
+    { login: USER }
+  ).catch((error) => {
+    console.warn(`${error.message}; using public repository signals for the topology.`);
+    return null;
+  });
+
+  const languageCounts = new Map();
+  for (const repo of repos) {
+    if (repo.language) {
+      languageCounts.set(repo.language, (languageCounts.get(repo.language) || 0) + 1);
     }
-    const topLanguage =
-      [...languageCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || "C#";
-
-    const today = new Date();
-    const activity = Array.from({ length: 28 }, (_, index) => {
-      const date = new Date(today);
-      date.setUTCDate(date.getUTCDate() - (27 - index));
-      return { date: dayKey(date), count: 0 };
-    });
-    const activityMap = new Map(activity.map((item) => [item.date, item]));
-
-    for (const event of events) {
-      const bucket = activityMap.get(String(event.created_at).slice(0, 10));
-      if (bucket) bucket.count += 1;
-    }
-
-    // Public events can be empty when a user hides parts of their activity.
-    // Repository push timestamps keep the signal honest without exposing private work.
-    for (const repo of repos) {
-      const bucket = activityMap.get(String(repo.pushed_at || "").slice(0, 10));
-      if (bucket) bucket.count += 1;
-    }
-
-    const latestRepo = [...repos].sort(
-      (left, right) =>
-        new Date(right.pushed_at || 0).getTime() - new Date(left.pushed_at || 0).getTime()
-    )[0];
-    const contributionCalendar =
-      calendarData?.user?.contributionsCollection?.contributionCalendar;
-    const contributionWeeks =
-      contributionCalendar?.weeks?.slice(-34) || calendarFromPublicSignals(events, repos);
-
-    return {
-      publicRepos: user.public_repos,
-      topLanguage,
-      activeDays: activity.filter((day) => day.count > 0).length,
-      latestRepo: latestRepo?.name || "signal unavailable",
-      activity,
-      contributionWeeks,
-      totalContributions:
-        contributionCalendar?.totalContributions ??
-        contributionWeeks
-          .flatMap((week) => week.contributionDays)
-          .reduce((sum, day) => sum + day.contributionCount, 0)
-    };
-  } catch (error) {
-    console.warn(`${error.message}; using deterministic preview telemetry.`);
-    return fallbackData();
   }
+  const topLanguage =
+    [...languageCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || "C#";
+
+  const today = new Date();
+  const activity = Array.from({ length: 28 }, (_, index) => {
+    const date = new Date(today);
+    date.setUTCDate(date.getUTCDate() - (27 - index));
+    return { date: dayKey(date), count: 0 };
+  });
+  const activityMap = new Map(activity.map((item) => [item.date, item]));
+
+  for (const event of events) {
+    const bucket = activityMap.get(String(event.created_at).slice(0, 10));
+    if (bucket) bucket.count += 1;
+  }
+
+  // Public events can be empty when a user hides parts of their activity.
+  // Repository push timestamps keep the signal honest without exposing private work.
+  for (const repo of repos) {
+    const bucket = activityMap.get(String(repo.pushed_at || "").slice(0, 10));
+    if (bucket) bucket.count += 1;
+  }
+
+  const latestRepo = repos.filter((repo) =>
+    repo.name.toLowerCase() !== USER.toLowerCase() && !repo.fork
+  ).sort(
+    (left, right) =>
+      new Date(right.pushed_at || 0).getTime() - new Date(left.pushed_at || 0).getTime()
+  )[0];
+  const contributionCalendar =
+    calendarData?.user?.contributionsCollection?.contributionCalendar;
+  const contributionWeeks =
+    contributionCalendar?.weeks?.slice(-34) || calendarFromPublicSignals(events, repos);
+
+  return {
+    publicRepos: user.public_repos,
+    topLanguage,
+    activeDays: activity.filter((day) => day.count > 0).length,
+    latestRepo: latestRepo?.name || "signal unavailable",
+    activity,
+    contributionWeeks,
+    source: contributionCalendar ? "contributions" : "public signals",
+    totalContributions: contributionWeeks
+      .flatMap((week) => week.contributionDays)
+      .reduce((sum, day) => sum + day.contributionCount, 0)
+  };
 }
 
 function renderProfessionalTopology(data, palette) {
@@ -273,7 +246,7 @@ function renderProfessionalTopology(data, palette) {
       const x = gridX + day.column * step;
       const y = gridY + day.row * step;
       return `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="3" fill="${levelColor(day.count)}">
-        <title>${esc(day.date)}: ${day.count} public contributions</title>
+        <title>${esc(day.date)}: ${day.count} ${esc(data.source)}</title>
       </rect>`;
     })
     .join("");
@@ -296,7 +269,7 @@ function renderProfessionalTopology(data, palette) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="306" viewBox="0 0 1200 306" role="img" aria-labelledby="title desc">
   <title id="title">Ingaleee contribution topology</title>
-  <desc id="desc">Automatically refreshed public GitHub activity visualized as a distributed systems trace.</desc>
+  <desc id="desc">Public GitHub activity: ${data.publicRepos} repositories, primary language ${esc(data.topLanguage)}, ${data.totalContributions} ${esc(data.source)} across the displayed 34 weeks. Last public project push: ${esc(data.latestRepo)}. Refreshed ${updated}.</desc>
   <defs>
     <pattern id="topologyGrid" width="28" height="28" patternUnits="userSpaceOnUse">
       <path d="M28 0H0V28" fill="none" stroke="${palette.grid}" stroke-width="1"/>
@@ -331,10 +304,10 @@ function renderProfessionalTopology(data, palette) {
     <text x="20" y="65" class="sans" font-size="32" font-weight="760" fill="${palette.cyan}">${esc(data.publicRepos)}</text>
     <text x="122" y="28" class="mono" font-size="10" letter-spacing="1" fill="${palette.muted}">PRIMARY</text>
     <text x="122" y="65" class="mono" font-size="18" fill="${palette.text}">${esc(data.topLanguage)}</text>
-    <text x="222" y="28" class="mono" font-size="10" letter-spacing="1" fill="${palette.muted}">SIGNALS</text>
+    <text x="222" y="28" class="mono" font-size="10" letter-spacing="1" fill="${palette.muted}">${data.source === "contributions" ? "CONTRIB / 34W" : "SIGNALS / 34W"}</text>
     <text x="222" y="65" class="sans" font-size="32" font-weight="760" fill="${palette.cyan}">${esc(data.totalContributions)}</text>
     <line x1="20" y1="88" x2="320" y2="88" stroke="${palette.line}"/>
-    <text x="20" y="112" class="mono" font-size="9" letter-spacing=".8" fill="${palette.muted}">LATEST DEPLOYMENT SIGNAL</text>
+    <text x="20" y="112" class="mono" font-size="10" letter-spacing=".8" fill="${palette.muted}">LATEST PUBLIC PROJECT PUSH</text>
     <text x="20" y="135" class="mono" font-size="12" fill="${palette.text}">${esc(data.latestRepo.slice(0, 39))}</text>
   </g>
 
@@ -348,7 +321,7 @@ function renderProfessionalTopology(data, palette) {
   </g>
   <text x="${gridX}" y="249" class="mono" font-size="9" fill="${palette.muted}">-34W</text>
   <text x="${gridX + 586}" y="249" class="mono" font-size="9" fill="${palette.muted}">NOW</text>
-  <text x="${gridX}" y="272" class="mono" font-size="9" letter-spacing=".8" fill="${palette.muted}">TRACE MODE / PUBLIC CONTRIBUTION DENSITY / AUTO-REFRESHED</text>
+  <text x="${gridX}" y="272" class="mono" font-size="10" letter-spacing=".8" fill="${palette.muted}">SOURCE / ${data.source === "contributions" ? "GITHUB CONTRIBUTION CALENDAR" : "PUBLIC EVENTS + REPOSITORY PUSHES"} / DAILY REFRESH</text>
 </svg>
 `;
 }
@@ -411,15 +384,21 @@ function render(data, palette) {
 `;
 }
 
-const data = await collectData();
-await mkdir(new URL("../assets/", import.meta.url), { recursive: true });
+async function refresh() {
+  const data = await collectData();
+  await mkdir(new URL("../assets/", import.meta.url), { recursive: true });
 
-for (const [name, palette] of Object.entries(themes)) {
-  await writeFile(
-    new URL(`../assets/activity-${name}.svg`, import.meta.url),
-    name === "professional" ? renderProfessionalTopology(data, palette) : render(data, palette),
-    "utf8"
-  );
+  for (const [name, palette] of Object.entries(themes)) {
+    await writeFile(
+      new URL(`../assets/activity-${name}.svg`, import.meta.url),
+      name === "professional" ? renderProfessionalTopology(data, palette) : render(data, palette),
+      "utf8"
+    );
+  }
+
+  console.log("Refreshed professional contribution topology.");
 }
 
-console.log("Refreshed professional contribution topology.");
+if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
+  await refresh();
+}

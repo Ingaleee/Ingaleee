@@ -9,8 +9,8 @@ const themes = {
     soft: "#1b242e",
     grid: "#16202a",
     text: "#eef4f7",
-    muted: "#8695a3",
-    faint: "#536372",
+    muted: "#9eacb8",
+    faint: "#7b8d9e",
     accent: "#55d9e8",
     accent2: "#258c9c",
     ok: "#57dfa9",
@@ -67,20 +67,20 @@ function lineClips(lines, x, y, gap, width, prefix) {
 }
 
 function renderLog(lines, x, y, gap, prefix, theme, mobile = false) {
-  const tagX = x + (mobile ? 72 : 82);
-  const messageX = x + (mobile ? 150 : 174);
-  const font = mobile ? 13.5 : 14.5;
+  const tagX = x + (mobile ? 92 : 82);
+  const messageX = x + (mobile ? 204 : 174);
+  const font = mobile ? 22 : 14.5;
   return lines
     .map(([tag, message, type], index) => {
       const color = type === "trace" ? theme.warning : type === "final" ? theme.accent : theme.ok;
       const time = `12:04:${String(17 + index).padStart(2, "0")}`;
       const cursor =
         type === "final"
-          ? `<rect x="${messageX + (mobile ? 243 : 276)}" y="${y + index * gap - 15}" width="8" height="18" fill="${theme.accent}"><animate attributeName="opacity" values="1;1;0;0" dur=".88s" repeatCount="indefinite"/></rect>`
+          ? `<rect x="${messageX + (mobile ? 306 : 276)}" y="${y + index * gap - (mobile ? 19 : 15)}" width="8" height="${mobile ? 22 : 18}" fill="${theme.accent}"><animate attributeName="opacity" values="1;1;0;0" dur=".88s" repeatCount="indefinite"/></rect>`
           : "";
       return `<g clip-path="url(#${prefix}${index})">
-        <text x="${x}" y="${y + index * gap}" class="mono" font-size="${font - 2}" fill="${theme.faint}">${time}</text>
-        <text x="${tagX}" y="${y + index * gap}" class="mono" font-size="${font - 1}" font-weight="800" fill="${color}">${tag}</text>
+        <text x="${x}" y="${y + index * gap}" class="mono" font-size="${mobile ? 12.5 : font - 2}" fill="${theme.faint}">${time}</text>
+        <text x="${tagX}" y="${y + index * gap}" class="mono" font-size="${mobile ? 18 : font - 1}" font-weight="800" fill="${color}">${tag}</text>
         <text x="${messageX}" y="${y + index * gap}" class="mono" font-size="${font}" font-weight="${type === "final" ? 760 : 520}" fill="${theme.text}">${message}</text>
         ${cursor}
       </g>`;
@@ -91,7 +91,7 @@ function renderLog(lines, x, y, gap, prefix, theme, mobile = false) {
 function systemCard({ x, y, width, height, system, theme, delay, mobile = false }) {
   const [title, stack, note] = system;
   const noteLine = mobile
-    ? `<text x="20" y="73" class="sans" font-size="10.5" fill="${theme.muted}">${note}</text>`
+    ? `<text x="20" y="78" class="sans" font-size="17" fill="${theme.muted}">${note}</text>`
     : "";
   return `<g transform="translate(${x} ${y})" opacity="0">
     <animate attributeName="opacity" from="0" to="1" dur=".65s" begin="${delay}s" fill="freeze"/>
@@ -99,8 +99,8 @@ function systemCard({ x, y, width, height, system, theme, delay, mobile = false 
     <circle cx="20" cy="22" r="4" fill="${theme.ok}">
       <animate attributeName="opacity" values=".35;1;.35" dur="2.8s" begin="${delay}s" repeatCount="indefinite"/>
     </circle>
-    <text x="34" y="26" class="mono" font-size="${mobile ? 10 : 10.5}" font-weight="800" letter-spacing=".9" fill="${theme.accent}">${title}</text>
-    <text x="20" y="${mobile ? 52 : 55}" class="sans" font-size="${mobile ? 13 : 13.5}" font-weight="650" fill="${theme.text}">${stack}</text>
+    <text x="34" y="26" class="mono" font-size="${mobile ? 14 : 10.5}" font-weight="800" letter-spacing=".9" fill="${theme.accent}">${title}</text>
+    <text x="20" y="${mobile ? 54 : 55}" class="sans" font-size="${mobile ? 20 : 13.5}" font-weight="650" fill="${theme.text}">${stack}</text>
     ${noteLine}
   </g>`;
 }
@@ -292,11 +292,24 @@ function buildMobile(themeName) {
 </svg>`;
 }
 
+// Keep the same layout fully visible when the visitor prefers reduced motion.
+function still(svg) {
+  return svg
+    .replace(/<desc id="desc">Animated /, '<desc id="desc">Static ')
+    .replace(/<rect([^>]*\bwidth=")0("[^>]*)><animate\b[^>]*\bto="(\d+)"[^>]*\/><\/rect>/g, '<rect$1$3$2/>')
+    .replace(/<animate(?:Motion|Transform)?\b[^>]*\/>/g, "")
+    .replaceAll(' opacity="0"', ' opacity="1"')
+    .replace(/class="sweep"/g, 'class="still-sweep"')
+    .replace(/class="pulse"/g, 'class="still-pulse"');
+}
+
 await Promise.all([
   writeFile(new URL("../assets/evidence-stream-dark.svg", import.meta.url), buildDesktop("dark"), "utf8"),
   writeFile(new URL("../assets/evidence-stream-light.svg", import.meta.url), buildDesktop("light"), "utf8"),
   writeFile(new URL("../assets/evidence-stream-mobile-dark.svg", import.meta.url), buildMobile("dark"), "utf8"),
   writeFile(new URL("../assets/evidence-stream-mobile-light.svg", import.meta.url), buildMobile("light"), "utf8"),
+  writeFile(new URL("../assets/evidence-stream-still-dark.svg", import.meta.url), still(buildDesktop("dark")), "utf8"),
+  writeFile(new URL("../assets/evidence-stream-mobile-still-dark.svg", import.meta.url), still(buildMobile("dark")), "utf8"),
 ]);
 
 console.log("Built production evidence stream assets.");
