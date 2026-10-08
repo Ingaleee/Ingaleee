@@ -18,7 +18,7 @@
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://github.com/Ingaleee?tab=repositories"><strong>REPOSITORIES</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#independent-engineering"><strong>PROJECTS &amp; CODE</strong></a>
+  <a href="#user-content-independent-engineering"><strong>PROJECTS &amp; CODE</strong></a>
 </p>
 
 <div align="center">
