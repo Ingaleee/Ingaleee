@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-professional.mjs && node scripts/build-command-center.mjs && node scripts/build-evidence-stream.mjs",
+    "build": "node scripts/build-professional.mjs && node scripts/build-command-center.mjs && node scripts/build-evidence-stream.mjs && node scripts/build-showcase.mjs",
+    "build:showcase": "node scripts/build-showcase.mjs",
     "build:command-center": "node scripts/build-command-center.mjs",
     "build:evidence-stream": "node scripts/build-evidence-stream.mjs",
     "build:professional": "node scripts/build-professional.mjs",
