@@ -76,17 +76,23 @@ function metrics(mobile) {
   let body = "";
   const width = mobile ? 720 : 1200;
   const cardW = mobile ? 346 : 285;
-  const cardH = mobile ? 190 : 168;
+  const cardH = mobile ? 214 : 168;
   entries.forEach(([i, value, label, note], index) => {
     const x = mobile ? (index % 2) * 370 : index * 305;
-    const y = mobile ? Math.floor(index / 2) * 214 : 0;
+    const y = mobile ? Math.floor(index / 2) * 238 : 0;
     body += panel(x + 2, y + 2, cardW, cardH, 16);
     body += icon(i, x + 25, y + 21, 29);
     body += text(x + 25, y + 91, value, mobile ? 39 : 35, colors.text, 700);
-    body += text(x + 25, y + 123, label, mobile ? 20 : 18, colors.muted, 500);
-    body += text(x + 25, y + 153, note, mobile ? 15 : 13, colors.cyan);
+    if (mobile) {
+      const labels = index === 3 ? ["Knowledge base", "rollouts"] : [label];
+      labels.forEach((line, row) => body += text(x + 25, y + 126 + row * 30, line, 28, colors.muted, 500));
+      body += text(x + 25, y + 193, index === 2 ? "High-load · distributed" : note, 20, colors.cyan);
+    } else {
+      body += text(x + 25, y + 123, label, 18, colors.muted, 500);
+      body += text(x + 25, y + 153, note, 13, colors.cyan);
+    }
   });
-  return svg(width, mobile ? 410 : 172, "Search p95 150 ms at 100K–1M SKU; MTTR −70%; 4+ years in production; zero-downtime AI/RAG rollouts.", body);
+  return svg(width, mobile ? 456 : 172, "Search p95 150 ms at 100K–1M SKU; MTTR −70%; 4+ years in production; zero-downtime AI/RAG rollouts.", body);
 }
 const projects = [
   ["mesh", "box", "MESH Showcase", "Ruby · Rails · Next.js · PostgreSQL", ["Creator marketplace with payment simulation,", "idempotent integrations and recovery exercises."], "FEATURED"],
@@ -134,16 +140,16 @@ const principles = [
 function principlesGrid(mobile) {
   let body = "";
   principles.forEach(([i, title, lines], index) => {
-    const cardW = mobile ? 346 : 285;
-    const x = mobile ? (index % 2) * 370 : index * 305;
-    const y = mobile ? Math.floor(index / 2) * 238 : 0;
-    body += panel(x + 2, y + 2, cardW, mobile ? 215 : 202, 16);
-    body += icon(i, x + 22, y + 21, 31);
-    body += text(x + 22, y + 86, title, mobile ? 21 : 18, colors.text, 700);
+    const cardW = mobile ? 716 : 285;
+    const x = mobile ? 0 : index * 305;
+    const y = mobile ? index * 220 : 0;
+    body += panel(x + 2, y + 2, cardW, mobile ? 196 : 202, 16);
+    body += icon(i, x + 22, y + 21, mobile ? 42 : 31);
+    body += text(x + (mobile ? 84 : 22), y + (mobile ? 55 : 86), title, mobile ? 34 : 18, colors.text, 700);
     const desktopLines = index === 0 ? ["Plan for partial failures,", "observability and graceful", "degradation."] : index === 3 ? ["From design and deployment", "to monitoring and incident", "resolution."] : lines;
-    (mobile ? lines : desktopLines).forEach((line, row) => body += text(x + 22, y + 126 + row * 26, line, mobile ? 16 : 16, colors.muted));
+    (mobile ? lines : desktopLines).forEach((line, row) => body += text(x + 22, y + (mobile ? 117 : 126) + row * (mobile ? 41 : 26), line, mobile ? 30 : 16, colors.muted));
   });
-  return svg(mobile ? 720 : 1200, mobile ? 456 : 206, principles.map(([, t, lines]) => `${t}: ${lines.join(" ")}`).join(" "), body);
+  return svg(mobile ? 720 : 1200, mobile ? 858 : 206, principles.map(([, t, lines]) => `${t}: ${lines.join(" ")}`).join(" "), body);
 }
 function button(label, i, emphasis) {
   return svg(210, 54, label, `<rect x="1" y="1" width="208" height="52" rx="9" fill="${emphasis ? "#102635" : colors.bg}" stroke="${emphasis ? "#36738c" : colors.line}" stroke-width="2"/>${icon(i, 15, 15, 24)}${text(51, 34, label, 18, colors.text, 600)}`);
