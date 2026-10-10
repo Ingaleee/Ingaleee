@@ -46,17 +46,17 @@ My focus is **performance, reliability, clean architecture and measurable impact
 <table>
 <tr>
 <td width="50%" valign="top">
-  <a href="https://github.com/Ingaleee/MESH-showcase"><img src="./assets/project-mesh-v17.svg" width="100%" alt="MESH Showcase — creator marketplace with payment simulation, idempotent integrations, deployment and recovery exercises. Ruby / Rails, Next.js, PostgreSQL."></a>
+  <a href="https://github.com/Ingaleee/MESH-showcase"><picture><source media="(max-width: 600px)" srcset="./assets/project-mesh-mobile-v17.svg"><img src="./assets/project-mesh-v17.svg" width="100%" alt="MESH Showcase — creator marketplace with payment simulation, idempotent integrations, deployment and recovery exercises. Ruby / Rails, Next.js, PostgreSQL."></picture></a>
   <p><a href="https://github.com/Ingaleee/MESH-showcase#readme"><strong>Overview</strong></a> &nbsp;·&nbsp; <a href="https://github.com/Ingaleee/MESH-showcase/tree/main/apps"><strong>Code</strong></a></p>
-  <details><summary>Engineering details &amp; evidence</summary>
+  <details><summary>Details &amp; evidence</summary>
     <p>Creator marketplace with payment simulation, idempotent integrations, deployment and recovery exercises.</p>
     <p><a href="https://github.com/Ingaleee/MESH-showcase/blob/main/docs/publishing-lab.md">Integration &amp; release lab</a> · <a href="https://github.com/Ingaleee/MESH-showcase/blob/main/docs/execution-status.md">Execution evidence</a></p>
   </details>
 </td>
 <td width="50%" valign="top">
-  <a href="https://github.com/Ingaleee/FusionOps"><img src="./assets/project-fusionops-v17.svg" width="100%" alt="FusionOps — resource allocation, event-based audit, outbox delivery and read projections. C# / .NET, EventStoreDB, PostgreSQL."></a>
+  <a href="https://github.com/Ingaleee/FusionOps"><picture><source media="(max-width: 600px)" srcset="./assets/project-fusionops-mobile-v17.svg"><img src="./assets/project-fusionops-v17.svg" width="100%" alt="FusionOps — resource allocation, event-based audit, outbox delivery and read projections. C# / .NET, EventStoreDB, PostgreSQL."></picture></a>
   <p><a href="https://github.com/Ingaleee/FusionOps#readme"><strong>Overview</strong></a> &nbsp;·&nbsp; <a href="https://github.com/Ingaleee/FusionOps/tree/main/FusionOps.Application"><strong>Code</strong></a></p>
-  <details><summary>Engineering details &amp; evidence</summary>
+  <details><summary>Details &amp; evidence</summary>
     <p>Resource allocation, event-based audit, outbox delivery and read projections.</p>
     <p><a href="https://github.com/Ingaleee/FusionOps/blob/main/FusionOps.Presentation/BackgroundServices/OutboxDispatcher.cs">Outbox</a> · <a href="https://github.com/Ingaleee/FusionOps/tree/main/FusionOps.Infrastructure/Projector">Projector</a> · <a href="https://gitlab.com/Ingaleee/fusionops">GitLab</a></p>
   </details>
@@ -64,17 +64,17 @@ My focus is **performance, reliability, clean architecture and measurable impact
 </tr>
 <tr>
 <td width="50%" valign="top">
-  <a href="https://github.com/Ingaleee/market-tick-ingestion"><img src="./assets/project-market-v17.svg" width="100%" alt="Market Tick Ingestion — three simulated WebSocket feeds, bounded queues, reconnects, deduplication and batch writes. C# / .NET 10, PostgreSQL."></a>
+  <a href="https://github.com/Ingaleee/market-tick-ingestion"><picture><source media="(max-width: 600px)" srcset="./assets/project-market-mobile-v17.svg"><img src="./assets/project-market-v17.svg" width="100%" alt="Market Tick Ingestion — three simulated WebSocket feeds, bounded queues, reconnects, deduplication and batch writes. C# / .NET 10, PostgreSQL."></picture></a>
   <p><a href="https://github.com/Ingaleee/market-tick-ingestion#readme"><strong>Overview</strong></a> &nbsp;·&nbsp; <a href="https://github.com/Ingaleee/market-tick-ingestion/tree/main/src"><strong>Code</strong></a></p>
-  <details><summary>Engineering details &amp; tests</summary>
+  <details><summary>Details &amp; tests</summary>
     <p>Three simulated WebSocket feeds, bounded queues, reconnects, deduplication and batch writes.</p>
     <p><a href="https://github.com/Ingaleee/market-tick-ingestion/tree/main/src/MarketData.Application/Ingestion">Pipeline</a> · <a href="https://github.com/Ingaleee/market-tick-ingestion/blob/main/tests/MarketData.Application.Tests/Ingestion/TickIngestionConcurrencyTests.cs">Concurrency tests</a></p>
   </details>
 </td>
 <td width="50%" valign="top">
-  <a href="https://github.com/Ingaleee/MPLX"><img src="./assets/project-mplx-v17.svg" width="100%" alt="MPLX — C++20 compiler, bytecode virtual machine, language tooling and a stable .NET interop boundary."></a>
+  <a href="https://github.com/Ingaleee/MPLX"><picture><source media="(max-width: 600px)" srcset="./assets/project-mplx-mobile-v17.svg"><img src="./assets/project-mplx-v17.svg" width="100%" alt="MPLX — C++20 compiler, bytecode virtual machine, language tooling and a stable .NET interop boundary."></picture></a>
   <p><a href="https://github.com/Ingaleee/MPLX#readme"><strong>Overview</strong></a> &nbsp;·&nbsp; <a href="https://github.com/Ingaleee/MPLX/tree/main/Application"><strong>Code</strong></a></p>
-  <details><summary>Engineering details &amp; tests</summary>
+  <details><summary>Details &amp; tests</summary>
     <p>C++20 compiler, bytecode virtual machine, language tooling and a stable .NET interop boundary.</p>
     <p><a href="https://github.com/Ingaleee/MPLX/tree/main/Application/mplx-compiler">Compiler</a> · <a href="https://github.com/Ingaleee/MPLX/tree/main/Application/mplx-vm">Virtual machine</a> · <a href="https://github.com/Ingaleee/MPLX/tree/main/Presentation/tests-cpp">Language tests</a> · <a href="https://gitlab.com/Ingaleee/mplx">GitLab</a></p>
   </details>
@@ -82,17 +82,17 @@ My focus is **performance, reliability, clean architecture and measurable impact
 </tr>
 <tr>
 <td width="50%" valign="top">
-  <a href="https://gitlab.com/Ingaleee/trusthub-backend"><img src="./assets/project-trusthub-v17.svg" width="100%" alt="TrustHub — TON escrow platform with a Go backend and Tact smart contracts, deal state machines, arbitration, reputation and on-chain acknowledgements."></a>
+  <a href="https://gitlab.com/Ingaleee/trusthub-backend"><picture><source media="(max-width: 600px)" srcset="./assets/project-trusthub-mobile-v17.svg"><img src="./assets/project-trusthub-v17.svg" width="100%" alt="TrustHub — TON escrow platform with a Go backend and Tact smart contracts, deal state machines, arbitration, reputation and on-chain acknowledgements."></picture></a>
   <p><a href="https://gitlab.com/Ingaleee/trusthub-backend#readme"><strong>Overview</strong></a> &nbsp;·&nbsp; <a href="https://gitlab.com/Ingaleee/trusthub-backend/-/tree/main/internal"><strong>Code</strong></a></p>
-  <details><summary>Engineering details &amp; tests</summary>
+  <details><summary>Details &amp; tests</summary>
     <p>TON escrow platform with a Go backend and Tact smart contracts. Explicit deal state machines, arbitration and reputation; Telegram identity, notifications, OpenSearch, operational monitoring and on-chain acknowledgements.</p>
     <p><a href="https://gitlab.com/Ingaleee/trusthub-backend">Go backend</a> · <a href="https://gitlab.com/Ingaleee/smart/-/tree/main/application/contracts">Tact contracts</a> · <a href="https://gitlab.com/Ingaleee/trusthub-backend/-/tree/main/internal/onchain">TON integration</a> · <a href="https://gitlab.com/Ingaleee/trusthub-backend/-/tree/main/tests/integration">Backend integration tests</a></p>
   </details>
 </td>
 <td width="50%" valign="top">
-  <a href="https://gitlab.com/Ingaleee/aiti_guru_backend"><img src="./assets/project-aiti-v17.svg" width="100%" alt="Aiti Guru backend — commerce and logistics API, transactional stock updates and order management. Python / FastAPI, PostgreSQL, Redis."></a>
+  <a href="https://gitlab.com/Ingaleee/aiti_guru_backend"><picture><source media="(max-width: 600px)" srcset="./assets/project-aiti-mobile-v17.svg"><img src="./assets/project-aiti-v17.svg" width="100%" alt="Aiti Guru backend — commerce and logistics API, transactional stock updates and order management. Python / FastAPI, PostgreSQL, Redis."></picture></a>
   <p><a href="https://gitlab.com/Ingaleee/aiti_guru_backend#readme"><strong>Overview</strong></a> &nbsp;·&nbsp; <a href="https://gitlab.com/Ingaleee/aiti_guru_backend/-/tree/main/src"><strong>Code</strong></a></p>
-  <details><summary>Engineering details &amp; tests</summary>
+  <details><summary>Details &amp; tests</summary>
     <p>Commerce and logistics API, transactional stock updates and order management.</p>
     <p><a href="https://gitlab.com/Ingaleee/aiti_guru_backend/-/blob/main/src/application/services/order_service.py">Order service</a> · <a href="https://gitlab.com/Ingaleee/aiti_guru_backend/-/tree/main/tests">Tests</a></p>
   </details>

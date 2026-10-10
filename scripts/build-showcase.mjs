@@ -106,6 +106,25 @@ function projectCard([slug, i, name, stack, lines, tag]) {
   body += text(26, 210, stack, slug === "trusthub" ? 16 : 17, colors.cyan, 500);
   return svg(560, 234, `${name} — ${lines.join(" ")} ${stack}.`, body);
 }
+const mobileProjects = {
+  mesh: [["MESH", "Showcase"], ["Creator market.", "Payment flows,", "safe retries", "and recovery."], ["Ruby · Rails", "Next.js", "PostgreSQL"]],
+  fusionops: [["FusionOps"], ["Resource", "allocation,", "outbox and", "projections."], ["C# · .NET", "EventStoreDB", "PostgreSQL"]],
+  market: [["Market Tick", "Ingestion"], ["Market feeds.", "Bounded queues,", "reconnects and", "batch writes."], ["C# · .NET 10", "PostgreSQL"]],
+  mplx: [["MPLX"], ["C++ compiler,", "bytecode VM", "and .NET", "interop."], ["C++20", "Bytecode VM", ".NET interop"]],
+  trusthub: [["TrustHub"], ["TON escrow.", "Tact contracts,", "arbitration", "and reputation."], ["Go · TON", "Tact · Redis", "PostgreSQL"]],
+  aiti: [["Aiti Guru", "backend"], ["Commerce API.", "Stock updates,", "orders and", "logistics."], ["Python", "FastAPI · Redis", "PostgreSQL"]]
+};
+function mobileProjectCard([slug, i, name, stack, lines, tag]) {
+  const [titleLines, summaryLines, stackLines] = mobileProjects[slug];
+  let body = panel(2, 2, 276, 468, 16);
+  body += icon(i, 24, 23, 33);
+  titleLines.forEach((line, index) => body += text(24, 96 + index * 36, line, 30, colors.text, 700));
+  body += text(24, 171, tag, 20, colors.cyan, 600, "mono", 'letter-spacing="1"');
+  summaryLines.forEach((line, index) => body += text(24, 213 + index * 33, line, 28, colors.muted));
+  body += `<path d="M24 336H256" stroke="${colors.line}"/>`;
+  stackLines.forEach((line, index) => body += text(24, 379 + index * 32, line, 26, colors.cyan, 500));
+  return svg(280, 472, `${name} — ${lines.join(" ")} ${stack}.`, body);
+}
 const principles = [
   ["shield", "Reliability by design", ["Plan for partial failures, observability", "and graceful degradation."]],
   ["bolt", "Performance with evidence", ["Measure, profile and optimize.", "Use data to guide decisions."]],
@@ -143,7 +162,10 @@ const files = {
   "contact-gitlab.svg": button("GitLab", "git", false),
   "contact-repositories.svg": button("Repositories", "repo", false),
   "contact-projects.svg": button("Projects & Code", "code", false),
-  ...Object.fromEntries(projects.map((project) => [`project-${project[0]}-v17.svg`, projectCard(project)]))
+  ...Object.fromEntries(projects.flatMap((project) => [
+    [`project-${project[0]}-v17.svg`, projectCard(project)],
+    [`project-${project[0]}-mobile-v17.svg`, mobileProjectCard(project)]
+  ]))
 };
 await Promise.all(Object.entries(files).map(([name, contents]) => writeFile(new URL(`../assets/${name}`, import.meta.url), contents, "utf8")));
 console.log(`Built ${Object.keys(files).length} profile showcase assets. Bird motion uses continuous SVG transforms; all copy is visible from the first frame.`);
