@@ -95,28 +95,28 @@
         <rect x="918" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
         <circle cx="925.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
-        <rect x="943" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
-        <circle cx="950.5" cy="188" r="1.5" fill="#3f8f00"/>
+        <rect x="943" y="104" width="15" height="92" rx="4" fill="#b3178b" opacity=".9"/>
+        <circle cx="950.5" cy="104" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="968" y="104" width="15" height="92" rx="4" fill="#b3178b" opacity=".9"/>
-        <circle cx="975.5" cy="104" r="3" fill="#3f8f00"/>
+        <rect x="968" y="132" width="15" height="64" rx="4" fill="#007d91" opacity=".9"/>
+        <circle cx="975.5" cy="132" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="993" y="132" width="15" height="64" rx="4" fill="#007d91" opacity=".9"/>
-        <circle cx="1000.5" cy="132" r="3" fill="#3f8f00"/>
+        <rect x="993" y="158" width="15" height="38" rx="4" fill="#007d91" opacity=".9"/>
+        <circle cx="1000.5" cy="158" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="1018" y="158" width="15" height="38" rx="4" fill="#007d91" opacity=".9"/>
-        <circle cx="1025.5" cy="158" r="3" fill="#3f8f00"/>
+        <rect x="1018" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
+        <circle cx="1025.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g><g>
-        <rect x="1043" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
-        <circle cx="1050.5" cy="188" r="1.5" fill="#3f8f00"/>
+        <rect x="1043" y="167" width="15" height="29" rx="4" fill="#007d91" opacity=".9"/>
+        <circle cx="1050.5" cy="167" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="1068" y="165" width="15" height="31" rx="4" fill="#007d91" opacity=".9"/>
-        <circle cx="1075.5" cy="165" r="3" fill="#3f8f00"/>
+        <rect x="1068" y="169" width="15" height="27" rx="4" fill="#007d91" opacity=".9"/>
+        <circle cx="1075.5" cy="169" r="3" fill="#3f8f00"/>
       </g><g>
-        <rect x="1093" y="174" width="15" height="22" rx="4" fill="#007d91" opacity=".9"/>
-        <circle cx="1100.5" cy="174" r="3" fill="#3f8f00"/>
+        <rect x="1093" y="188" width="15" height="8" rx="4" fill="#dceef4" opacity=".65"/>
+        <circle cx="1100.5" cy="188" r="1.5" fill="#3f8f00"/>
       </g>
   <text x="418" y="224" class="mono" font-size="10" fill="#557986">-28D</text>
   <text x="1075" y="224" class="mono" font-size="10" fill="#557986">NOW</text>
-  <text x="1020" y="53" class="mono" font-size="11" fill="#557986">SYNC 2026-10-13</text>
+  <text x="1020" y="53" class="mono" font-size="11" fill="#557986">SYNC 2026-10-14</text>
 </svg>
